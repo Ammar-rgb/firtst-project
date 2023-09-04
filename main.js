@@ -1495,14 +1495,29 @@ right case till you see any break if exists*/
 // console.log(myClassElement[1])
 // console.log(myQueryElement[1])
 
-console.log(document.title)
-console.log(document.body)
-console.log(document.forms[0].one.value)
-console.log(document.links[0].href)
+// console.log(document.title)
+// console.log(document.body)
+// console.log(document.forms[0].one.value)
+// console.log(document.links[0].href)
 
 
 
+// let myElement=document.querySelector(".js")
+// console.log(myElement.innerHTML)
+// console.log(myElement.textContent)
+// myElement.innerHTML="text from <span> main.js</span> file";
+// myElement.textContent="text from <span> main.js</span> file";
+// document.images[0].src="https://www.google.com"
+// document.images[0].alt="Alternate"
+// document.images[0].title="picture"
+// document.images[0].id="pic"
+// document.images[0].className="img"
 
+// let myLink=document.querySelector(".link")
+// console.log(myLink.getAttribute("class"))
+// console.log(myLink.getAttribute("href"))
+// myLink.setAttribute("href","https://google.com")
+// myLink.setAttribute("title","twitter")
 
 
 
