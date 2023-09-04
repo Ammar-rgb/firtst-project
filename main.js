@@ -1514,6 +1514,7 @@ right case till you see any break if exists*/
 // document.images[0].className="img"
 
 // let myLink=document.querySelector(".link")
+// console.log(myLink)
 // console.log(myLink.getAttribute("class"))
 // console.log(myLink.getAttribute("href"))
 // myLink.setAttribute("href","https://google.com")
@@ -1524,6 +1525,38 @@ right case till you see any break if exists*/
 
 
 
+// console.log(document.getElementsByTagName("p")[0].attributes)
+// console.log(document.getElementsByTagName("p")[0].attributes)
+// let myP=document.getElementsByTagName("p")[0];
+
+// if(myP.hasAttribute("data-src")){
+//     console.log('found')
+// }else{
+//     console.log('not found')
+// }
+
+// if(myP.hasAttribute("data-src")){
+//     if(myP.getAttribute("data-src")===""){
+//         myP.removeAttribute("data-src")
+//     }else{
+//         myP.setAttribute("data-src","newVal")
+//     }
+// }else{
+//     console.log('not found')
+// }
+
+
+// if(myP.hasAttributes()){
+//     console.log('has attributes')
+// }else{
+//     console.log("does't have")
+// }
+
+// if(document.getElementsByTagName("div")[0].hasAttributes()){
+//     console.log('has attributes')
+// }else{
+//     console.log("does't have")
+// }
 
 
 
