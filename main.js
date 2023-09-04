@@ -1482,6 +1482,25 @@ right case till you see any break if exists*/
 // targetObject.assign(targetObject,obj2)
 // console.log(targetObject)
 
+//the qurey selector just get the first suitable element 
+//so you can use querry selector all
+// let myIdElement=document.getElementById("my-div")
+// let myTagElement=document.getElementsByTagName("p")
+// let myClassElement=document.getElementsByClassName("my-span")
+// let myQueryElement=document.querySelectorAll(".my-span")
+
+// console.log(myIdElement)
+// console.log(myTagElement[0])
+// myTagElement[1].innerHTML="test"
+// console.log(myClassElement[1])
+// console.log(myQueryElement[1])
+
+console.log(document.title)
+console.log(document.body)
+console.log(document.forms[0].one.value)
+console.log(document.links[0].href)
+
+
 
 
 
