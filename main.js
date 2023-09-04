@@ -1443,6 +1443,45 @@ right case till you see any break if exists*/
 
 
 
+// let obj1 = {
+//   prop1: 1,
+//   meth1: function () {
+//     return this.prop1;
+//   },
+// };
+
+// let obj2 = {
+//   prop2: 1,
+//   meth2: function () {
+//     return this.prop2;
+//   },
+// };
+
+// let targetObject = {
+//   prop1: 4,
+//   prop3: 3,
+// };
+
+// if there two similar named properties it takes the prop in the source(obj1)
+// noteeeee : the targetObject got affected
+// let finalObject= Object.assign(targetObject, obj1)
+// console.log(finalObject)
+// console.log(targetObject)
+
+// let finalObject= Object.assign(targetObject, obj1,obj2)
+// console.log(finalObject)
+// console.log(targetObject)
+
+// let newObject=Object.assign({age:4},obj1)
+// console.log(newObject)
+
+//related to the note
+// Object.assign(targetObject,obj1)
+// console.log(targetObject)
+//Erorrrrrrrrrrr
+// targetObject.assign(targetObject,obj2)
+// console.log(targetObject)
+
 
 
 
