@@ -1462,11 +1462,6 @@ right case till you see any break if exists*/
 // targetObject.assign(targetObject,obj2)
 // console.log(targetObject)
 
-
-
-
-
-
 // let name = "ammar";
 // let member = {
 //   name: "Elzero",
@@ -1481,12 +1476,10 @@ right case till you see any break if exists*/
 // console.log(member.country);
 // console.log(member.fullDetails());
 
-
 // let objMethodOne={
 //     property:"Method One",
 // }
 // console.log(objMethodOne.property)
-
 
 // let objMethodTwo=new Object();
 // objMethodTwo.property="Method Two"
@@ -1501,13 +1494,12 @@ right case till you see any break if exists*/
 
 // noteeeee object.create does't accept empty value. i accept null or object
 //when i use new object it takes an object to inherit. it inherits ust the properties and takes the main protoype
-//but when i use Object.create it takes the prototype of the taken one 
-//and inside this inherited prototype there is also the main one 
-
+//but when i use Object.create it takes the prototype of the taken one
+//and inside this inherited prototype there is also the main one
 
 // let a = 1;
 // let threeNums = {
-//     b: 2, 
+//     b: 2,
 //     c: 3,
 //     d: 4,
 // };
@@ -1518,7 +1510,6 @@ right case till you see any break if exists*/
 
 // finalObj=Object.assign({},{a},threeNums,twoNums)
 // console.log(finalObj)
-
 
 // // The Object To Work With
 // let myFavGames = {
@@ -1545,16 +1536,15 @@ right case till you see any break if exists*/
 //       price: 40,
 //     },
 //   };
-  
 
 //   // Code One => How To Get Object Length ?
 //   let objectLength = Object.keys(myFavGames).length;
-  
+
 //   for (let i = 0; i < objectLength; i++) {
 //     console.log(`The Game Name Is ${Object.keys(myFavGames)[i]}`);
 //     console.log(`The Publisher Is ${Object.values(myFavGames)[i].publisher}`);
 //     console.log(`The Price Is ${Object.values(myFavGames)[i].price}`);
-  
+
 //     // Check If Nested Object Has Property (bestThree)
 //     if (Object.values(myFavGames)[i].bestThree!=undefined) {
 //       console.log("- Game Has Releases");
@@ -1564,16 +1554,6 @@ right case till you see any break if exists*/
 //     }else{
 //     console.log("#".repeat(20));
 //   }}
-
-
-
-
-
-
-
-
-
-
 
 //the qurey selector just get the first suitable element
 //so you can use querry selector all
@@ -1643,7 +1623,6 @@ right case till you see any break if exists*/
 //     console.log("does't have")
 // }
 
-
 // let myElement=document.createElement("div");
 // let myAttr=document.createAttribute("data-custom")
 // let myText=document.createTextNode("Product one")
@@ -1652,11 +1631,45 @@ right case till you see any break if exists*/
 // myElement.setAttributeNode(myAttr)
 // myElement.setAttribute("data-test", "testing")
 
-
-
 // // append comment to element
 // myElement.appendChild(myComment)
 // // append text to element
 // myElement.appendChild(myText)
 // // append element to body
 // document.body.appendChild(myElement)
+
+
+
+// let myDiv = document.createElement("div");
+// let heading = document.createElement("h2");
+// let para = document.createElement("p");
+
+// myDiv.className = "product";
+// heading.innerText = "Kurama";
+// para.innerText =
+//   "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit tempore optio fugiat inventore dolore, repellendus similique eius nam eveniet? Dicta, ducimus perspiciatis quo odit eaque omnis natus placeat ratione similique nostrum consequatur accusamus reprehenderit aliquideum ex aliquam. Similique, iusto.";
+// myDiv.appendChild(heading);
+// myDiv.appendChild(para);
+// for(let i=0;i<100;i++){
+//     heading.innerText = `Kurama ${i+1}`;
+//     document.body.appendChild(myDiv.cloneNode(true))
+// }
+
+
+
+// for(let i=1;i<=100;i++){
+// let myDiv = document.createElement("div");
+// let heading = document.createElement("h2");
+// let para = document.createElement("p");
+// let headtext=document.createTextNode(`Kurama ${i}`)
+// let paratext=document.createTextNode(`Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit tempore optio fugiat inventore dolore, repellendus similique eius nam eveniet? Dicta, ducimus perspiciatis quo odit eaque omnis natus placeat ratione similique nostrum consequatur accusamus reprehenderit aliquideum ex aliquam. Similique, iusto.";`)
+// heading.appendChild(headtext)
+// para.appendChild(paratext)
+// myDiv.appendChild(heading)
+// myDiv.appendChild(para)
+// myDiv.className = `product${i}`;
+// document.body.appendChild(myDiv)
+// }
+
+
+
