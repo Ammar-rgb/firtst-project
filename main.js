@@ -1327,10 +1327,6 @@ right case till you see any break if exists*/
 // console.log(user[100]);
 // console.log(user["country of"]);
 
-
-
-
-
 //you can't access the daynamic property name by dot notation
 //if the property name is valid, i can use dot notation or bracket notation
 //and if not, i must use bracket notation
@@ -1351,12 +1347,8 @@ right case till you see any break if exists*/
 // console.log(user.theName)
 // console.log(user["theName"])
 
-
-
-
-
-//propeties inside object's function if it is't mentioned exactly 
-//it search about its value in the global scope 
+//propeties inside object's function if it is't mentioned exactly
+//it search about its value in the global scope
 //so i must use this.the property
 // let user={
 //     name:"Ammar",
@@ -1381,8 +1373,6 @@ right case till you see any break if exists*/
 // console.log(user["addresses"]["Egypt"]["two"])
 // console.log(user.checkAv())
 
-
-
 // let user = new Object({
 //     age:30
 // });
@@ -1390,14 +1380,10 @@ right case till you see any break if exists*/
 // user.age =20;
 // console.log(user)
 
-
 // function say(){
 //     return this
 // }
 // console.log(say()===window)
-
-
-
 
 //noteeeeeeeeeeeee: when i used arrow function i got the window object
 //but when i used normal anonymous function i got the button
@@ -1416,9 +1402,8 @@ right case till you see any break if exists*/
 // console.log(user.age);
 // console.log(user.ageInDays())
 
-
 // let user ={
-//     age:24, 
+//     age:24,
 //     doubleAge:function(){
 //         return this.age *2
 //     }
@@ -1437,11 +1422,6 @@ right case till you see any break if exists*/
 // console.log(copyObj);
 // console.log(copyObj.age);
 // console.log(copyObj.doubleAge())
-
-
-
-
-
 
 // let obj1 = {
 //   prop1: 1,
@@ -1482,7 +1462,120 @@ right case till you see any break if exists*/
 // targetObject.assign(targetObject,obj2)
 // console.log(targetObject)
 
-//the qurey selector just get the first suitable element 
+
+
+
+
+
+// let name = "ammar";
+// let member = {
+//   name: "Elzero",
+//   age: 38,
+//   country: "Egypt",
+//   fullDetails: function () {
+//     return `My Name Is ${this.name}, My Age Is ${this.age}, I live in ${this.country}`;
+//   },
+// };
+// console.log(member.name);
+// console.log(member.age);
+// console.log(member.country);
+// console.log(member.fullDetails());
+
+
+// let objMethodOne={
+//     property:"Method One",
+// }
+// console.log(objMethodOne.property)
+
+
+// let objMethodTwo=new Object();
+// objMethodTwo.property="Method Two"
+// console.log(objMethodTwo.property)
+
+// let objMethodThree=Object.create({property:"Method Three"},)
+// objMethodThree.property="method three"
+// console.log(objMethodThree.property)
+
+// let objMethodFour=Object.assign({},{property:"Method Four"})
+// console.log(objMethodFour.property)
+
+// noteeeee object.create does't accept empty value. i accept null or object
+//when i use new object it takes an object to inherit. it inherits ust the properties and takes the main protoype
+//but when i use Object.create it takes the prototype of the taken one 
+//and inside this inherited prototype there is also the main one 
+
+
+// let a = 1;
+// let threeNums = {
+//     b: 2, 
+//     c: 3,
+//     d: 4,
+// };
+// let twoNums={
+//     e: 5,
+//     f: 6,
+// };
+
+// finalObj=Object.assign({},{a},threeNums,twoNums)
+// console.log(finalObj)
+
+
+// // The Object To Work With
+// let myFavGames = {
+//     "Trinity Universe": {
+//       publisher: "NIS America",
+//       price: 40,
+//     },
+//     "Titan Quest": {
+//       publisher: "THQ",
+//       bestThree: {
+//         one: "Immortal Throne",
+//         two: "Ragnarök",
+//         three: "Atlantis",
+//       },
+//       price: 50,
+//     },
+//     YS: {
+//       publisher: "Falcom",
+//       bestThree: {
+//         one: "Oath in Felghana",
+//         two: "Ark Of Napishtim",
+//         three: "origin",
+//       },
+//       price: 40,
+//     },
+//   };
+  
+
+//   // Code One => How To Get Object Length ?
+//   let objectLength = Object.keys(myFavGames).length;
+  
+//   for (let i = 0; i < objectLength; i++) {
+//     console.log(`The Game Name Is ${Object.keys(myFavGames)[i]}`);
+//     console.log(`The Publisher Is ${Object.values(myFavGames)[i].publisher}`);
+//     console.log(`The Price Is ${Object.values(myFavGames)[i].price}`);
+  
+//     // Check If Nested Object Has Property (bestThree)
+//     if (Object.values(myFavGames)[i].bestThree!=undefined) {
+//       console.log("- Game Has Releases");
+//       console.log(`First => ${Object.values(myFavGames)[i].bestThree.one}`);
+//       console.log(`Second => ${Object.values(myFavGames)[i].bestThree.two}`);
+//       console.log(`Third => ${Object.values(myFavGames)[i].bestThree.three}`);
+//     }else{
+//     console.log("#".repeat(20));
+//   }}
+
+
+
+
+
+
+
+
+
+
+
+//the qurey selector just get the first suitable element
 //so you can use querry selector all
 // let myIdElement=document.getElementById("my-div")
 // let myTagElement=document.getElementsByTagName("p")
@@ -1499,8 +1592,6 @@ right case till you see any break if exists*/
 // console.log(document.body)
 // console.log(document.forms[0].one.value)
 // console.log(document.links[0].href)
-
-
 
 // let myElement=document.querySelector(".js")
 // console.log(myElement.innerHTML)
@@ -1519,11 +1610,6 @@ right case till you see any break if exists*/
 // console.log(myLink.getAttribute("href"))
 // myLink.setAttribute("href","https://google.com")
 // myLink.setAttribute("title","twitter")
-
-
-
-
-
 
 // console.log(document.getElementsByTagName("p")[0].attributes)
 // console.log(document.getElementsByTagName("p")[0].attributes)
@@ -1545,7 +1631,6 @@ right case till you see any break if exists*/
 //     console.log('not found')
 // }
 
-
 // if(myP.hasAttributes()){
 //     console.log('has attributes')
 // }else{
@@ -1559,9 +1644,19 @@ right case till you see any break if exists*/
 // }
 
 
+// let myElement=document.createElement("div");
+// let myAttr=document.createAttribute("data-custom")
+// let myText=document.createTextNode("Product one")
+// let myComment = document.createComment("this is div")
+// myElement.className="product";
+// myElement.setAttributeNode(myAttr)
+// myElement.setAttribute("data-test", "testing")
 
 
 
-
-
-
+// // append comment to element
+// myElement.appendChild(myComment)
+// // append text to element
+// myElement.appendChild(myText)
+// // append element to body
+// document.body.appendChild(myElement)
