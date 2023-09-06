@@ -1639,19 +1639,16 @@ right case till you see any break if exists*/
 // document.body.appendChild(myElement)
 
 
-
+// noteeee : ican edit the element i appended 
 // let myDiv = document.createElement("div");
 // let heading = document.createElement("h2");
 // let para = document.createElement("p");
-
-// myDiv.className = "product";
-// heading.innerText = "Kurama";
-// para.innerText =
-//   "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit tempore optio fugiat inventore dolore, repellendus similique eius nam eveniet? Dicta, ducimus perspiciatis quo odit eaque omnis natus placeat ratione similique nostrum consequatur accusamus reprehenderit aliquideum ex aliquam. Similique, iusto.";
 // myDiv.appendChild(heading);
 // myDiv.appendChild(para);
 // for(let i=0;i<100;i++){
 //     heading.innerText = `Kurama ${i+1}`;
+//     para.innerText=`Product number ${i+1}`
+//     myDiv.className = `product${i+1}`;
 //     document.body.appendChild(myDiv.cloneNode(true))
 // }
 
