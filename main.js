@@ -1387,7 +1387,15 @@ right case till you see any break if exists*/
 
 //noteeeeeeeeeeeee: when i used arrow function i got the window object
 //but when i used normal anonymous function i got the button
+// Arrow functions do not have their own `this` value because
+// they are designed to maintain the lexical scope of the surrounding context. 
+// arrow functions inherit the `this` value from the surrounding (lexical) scope in which they are defined.
+// This means that the value of `this` inside an arrow function is the same as the value of `this` outside the arrow function.
 // document.getElementById("cl").onclick=function(){
+//     console.log(this)
+// }
+
+// document.getElementById("cl").onclick=()=>{
 //     console.log(this)
 // }
 
@@ -1492,7 +1500,7 @@ right case till you see any break if exists*/
 // let objMethodFour=Object.assign({},{property:"Method Four"})
 // console.log(objMethodFour.property)
 
-// noteeeee object.create does't accept empty value. i accept null or object
+// noteeeee object.create does't accept empty value. it accepts null or object
 //when i use new object it takes an object to inherit. it inherits ust the properties and takes the main protoype
 //but when i use Object.create it takes the prototype of the taken one
 //and inside this inherited prototype there is also the main one
@@ -1654,6 +1662,18 @@ right case till you see any break if exists*/
 
 
 
+
+// very important noteeeeeeeeeeeee
+// In your code, variables such as myDiv, heading, para, headtext, and paratext are declared and initialized within the loop in each iteration.
+//  This means that in each iteration, new instances of these variables are created, effectively overwriting the previous values.
+// Within the loop, JavaScript allows you to declare and initialize variables multiple times with the same name because each iteration creates a new scope.
+//  Each iteration of the loop creates a separate execution context, and variables declared with let or const are block-scoped, 
+// meaning they exist only within that specific block or iteration.
+// However, outside the loop, redeclaring variables with the same name using let or const would result in an error 
+// because variables with block scope cannot be redeclared in the same scope.
+// To summarize, in your specific code, new variables are created in each iteration within the loop, 
+// but you cannot redeclare variables with the same name using let or const outside the loop in the same scope.
+
 // for(let i=1;i<=100;i++){
 // let myDiv = document.createElement("div");
 // let heading = document.createElement("h2");
@@ -1667,6 +1687,103 @@ right case till you see any break if exists*/
 // myDiv.className = `product${i}`;
 // document.body.appendChild(myDiv)
 // }
+
+// let myElement=document.querySelector("div")
+// // children gets just the elements
+// // childNodes gets the elements, texts and comments. everything
+// console.log(myElement.children)
+// console.log(myElement.children[0])
+// console.log(myElement.childNodes)
+// console.log(myElement.firstChild)
+// console.log(myElement.lastChild)
+// console.log(myElement.firstElementChild)
+// console.log(myElement.lastElementChild)
+
+
+
+
+// let ff = document.getElementById("ff");
+// ff.onfocus = function(){
+//     ff.setAttribute("placeholder","write here")
+// }
+
+
+
+
+
+
+// In all three code examples, you will get the same
+// result because the `event` object is automatically
+// passed as an argument to the event handler function when the event is triggered.
+
+// In the first example, the event handler function
+// takes the `event` object as a parameter and logs it
+// to the console. This will work as expected and log the `event` object.
+
+// In the second example, the event handler function 
+// does not explicitly define any parameters.
+// However, the `event` object is still automatically 
+// passed as an argument to the function. By omitting
+// the parameter, you are essentially choosing not to
+// use the `event` object. However, since the `event`
+// object is still available in the function scope, you 
+// can access it using the `event` keyword. So, you will
+// still get the same result when logging `event` to the console.
+
+// In the third example, the event handler function
+// takes a parameter named `e`. This parameter is 
+// used to capture the `event` object. By logging `e`
+// to the console, you will get the same result as
+// logging `event` in the previous examples.
+
+// So, in all three cases, you will get the same result 
+// because the `event` object is automatically 
+// available in the event handler function, whether 
+// you explicitly define a parameter for it or not.
+
+
+// document.links[0].onclick=function(event){
+//     console.log(event)
+// }
+
+// document.links[0].onmouseenter=function(){
+//     console.log(event)
+// }
+
+// document.links[0].onmouseenter=function(e){
+//     console.log(e)
+// }
+
+
+
+
+
+// document.links[0].onclick=function(e){
+//     console.log(e)
+//     e.preventDefault();
+// }
+
+
+
+
+
+
+// let userInput = document.querySelector("[name = 'username']")
+
+// document.forms[0].onsubmit =function (e){
+//     let userValid = false;
+
+//     if(userInput.value !== "" && userInput.value.length <= 10){
+//         userValid=true
+//     }
+
+//     if(userValid === false){
+//         e.preventDefault();
+//     }
+// }
+
+
+
 
 
 
