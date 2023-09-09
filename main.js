@@ -1787,3 +1787,128 @@ right case till you see any break if exists*/
 
 
 
+// noteeee : queryselector return the first element found 
+// and queryselectorall reterns an array called node list
+//and getelements by tagname or classname returns and array called html collection
+// let myDiv= document.querySelector("div");
+// let myDiv = document.querySelector("#elzero");
+// let myDiv = document.querySelector(".element")
+// let myDiv = document.querySelector("[name='js']")
+
+// let myDiv= document.querySelectorAll("div")[0];
+// let myDiv = document.querySelectorAll("#elzero")[0];
+// let myDiv = document.querySelectorAll(".element")[0];
+// let myDiv = document.querySelectorAll("[name='js']")[0]
+
+// let myDiv = document.getElementById("elzero");
+// let myDiv = document.getElementsByClassName("element")[0]
+// let myDiv = document.getElementsByTagName("div")[0]
+// let myDiv = document.body.firstElementChild
+// let myDiv = document.body.childNodes[19]
+// let myDiv = document.body.children[0]
+// let myDiv = document.body.lastElementChild.previousElementSibling
+
+// console.log(myDiv)
+
+// let myImg = document.querySelectorAll("[decoding= 'async']")
+// for (let i =0; i < myImg.length; i++){
+//     myImg[i].setAttribute("width","40px")
+//     myImg[i].setAttribute("src", "https://m.media-amazon.com/images/M/MV5BM2JjYmUyN2MtODIyOC00ZmNiLWI5YTUtN2NiMWQzNmM3OGU1XkEyXkFqcGdeQXVyNDk3NDEzMzk@._V1_.jpg")
+//     myImg[i].setAttribute("alt", "Elzero Logo")
+// }
+
+
+// let doller = document.querySelector("[name='dollar']")
+// let rs = document.querySelector(".result")
+
+// doller.onkeyup = function(){
+//     if(doller.value < 0){
+//         doller.value=0
+//     }
+//     rs.innerText= `{${doller.value}} USD Dollar = {${(doller.value * 30.6).toFixed(2)}} Egyptian Pound`
+// }
+
+// doller.onmouseup = function(){
+//     if(+doller.value < 0){
+//         doller.value=0
+//     }
+//     rs.innerText= `{${doller.value}} USD Dollar = {${(doller.value * 30.6).toFixed(2)}} Egyptian Pound`
+// }
+
+
+
+
+// let doller = document.querySelector("[name='dollar']");
+// let rs = document.querySelector(".result");
+
+// function updateResult() {
+//     if (doller.value < 0) {
+//         doller.value = 0;
+//     }
+//     rs.innerText = `{${doller.value}} USD Dollar = {${(doller.value * 30.6).toFixed(2)}} Egyptian Pound`;
+// }
+// doller.addEventListener("keyup", updateResult);
+// doller.addEventListener("mouseup", updateResult);
+
+
+// let first = document.querySelector(".one")
+// let second = document.querySelector(".two")
+// let script= document.querySelector("script")
+
+// let g = first.className
+// first.className=second.className
+// second.className=g
+// first.innerText += ' '+second.attributes.length
+// document.body.appendChild(first)
+// document.body.appendChild(script)
+
+
+
+
+// let myImg = document.querySelectorAll("[decoding= 'async']")
+// for (let i=0; i<myImg.length; i++){
+//     if(myImg[i].hasAttribute("alt")){
+//         myImg[i].setAttribute("alt", "old")
+//     }else{
+//         myImg[i].setAttribute("alt", "Elzero New")
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
