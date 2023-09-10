@@ -1851,6 +1851,9 @@ right case till you see any break if exists*/
 // doller.addEventListener("mouseup", updateResult);
 
 
+
+
+
 // let first = document.querySelector(".one")
 // let second = document.querySelector(".two")
 // let script= document.querySelector("script")
@@ -1875,6 +1878,50 @@ right case till you see any break if exists*/
 // }
 
 
+
+
+
+
+
+// let form = document.querySelector("form")
+// let ele = document.querySelector("[name='elements']")
+// let text = document.querySelector("[name='texts']")
+// let choose = document.querySelector("[name='type']")
+// let create = document.querySelector("[name='create']")
+// let result = document.querySelector("[class = 'results']")
+// let di = document.createElement("div")
+// let se = document.createElement("section")
+
+
+// di.className="di";
+// se.className="se"
+// di.setAttribute("title","Element")
+// se.setAttribute("title", "Element")
+
+
+// form.onsubmit= function(event){
+//     event.preventDefault();
+//     result.innerHTML="";
+//     if(choose.value === "Div" && ele.value >0){
+//         for(let i =0; i < ele.value; i++){
+//             di.innerText=`${text.value}`
+//             di.setAttribute("id",`id-${i+1}`)
+//             result.appendChild(di.cloneNode(true))
+//         }
+//     }else if (choose.value=== "Section" && ele.value >0){
+//         for(let i =0; i < ele.value; i++){
+//             se.innerText=`${text.value}`
+//             se.setAttribute("id",`id-${i+1}`)
+//             result.appendChild(se.cloneNode(true))
+//         }
+//     }
+
+// }
+
+let x = "d"
+for(let i =0; i <x; i++){
+    console.log('ss')
+}
 
 
 

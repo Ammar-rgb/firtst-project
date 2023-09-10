@@ -6,3 +6,52 @@
     text-align: center;
     font-size: 2vw;
 } */
+
+
+/* --------------------------------------------------------------- */
+
+/* form {
+    width: 46%;
+    margin: auto;
+    background-color: #eee;
+    text-align: center;
+    padding: 10px;
+    
+}
+
+input, .input {
+    display: block;
+    width: 90%;
+    margin:10px auto;
+    padding: 2px;
+    
+}
+
+input[type="submit"] {
+    background-color: rgb(0, 255, 170);
+    border-radius: 2px;
+    border-width: 1px;
+    cursor: pointer;
+}
+
+.results {
+    width: 500px;
+    position:absolute;
+    left: 0;
+    right: 0;
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.results div, .results section {
+    background-color: orangered;
+    margin: 10px;
+    width: 25%;
+    border: 1px solid  #777070;
+    border-radius: 2px;
+} */
+
+
+/* --------------------------------------------------- */
