@@ -1918,10 +1918,61 @@ right case till you see any break if exists*/
 
 // }
 
-let x = "d"
-for(let i =0; i <x; i++){
-    console.log('ss')
-}
+
+// noteeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee the will not cause error it won't just work
+// let x = "d"
+// for(let i =0; i <x; i++){
+//     console.log('ss')
+// }
+
+
+// let myHead = document.createElement("header")
+// let myLogo = document.createElement("div")
+// let menu = document.createElement("div")
+// let myUl = document.createElement("ul")
+// myUl.innerHTML="<li>Home</li> <li>About</li> <li>Service</li> <li>Content</li> "
+// myLogo.className="logo"
+// myUl.className="menu"
+// menu.appendChild(myUl)
+// myHead.appendChild(myLogo)
+// myHead.appendChild(menu)
+// myLogo.innerText="Elzero"
+// myLogo.style.cssText="color : rgb(2 163 90); width: 40px; font-weight: bold; font-size: 20px;"
+// menu.style.cssText=" color: #777070"
+// myUl.style.cssText = "list-style: none; display: flex; justify-content:space-between; width: 300px;"
+// myHead.style.cssText="display:flex; justify-content: space-between; align-items: center; "
+
+// // ---------------------------------------------------
+
+// let myContent = document.createElement("div")
+// myContent.className="container"
+// myContent.style.cssText="background-color: #eee; display: flex; flex-wrap: wrap; text-align: center; padding-bottom : 20px;"
+// let product = document.createElement("div")
+// let proNum = document.createElement("p")
+// proNum.style.cssText="font-weight: bold; font-family : Arial"
+// product.appendChild(proNum)
+// let span = document.createElement("span")
+// span.innerText="Product"
+// span.style.cssText="font-size : 12px; color : #777070"
+// product.appendChild(span)
+
+// product.style.cssText= "width: calc((100% - 80px) / 3); margin:20px 0 0px 20px ; background-color : white; padding: 10px 0; background-color: white "
+
+// for(let i =0; i<15; i++){
+//     proNum.innerText= `${i+1}`
+//     product.className=`product ${i+1}`
+//     myContent.appendChild(product.cloneNode(true))
+// }
+
+
+
+// // ---------------------------------------------------------
+
+
+
+// let foot = document.createElement("div")
+// foot.style.cssText="background-color : rgb(2 163 90); padding: 15px; color:white; text-align : center; font-weight : bold "
+// foot.innerText="Copyright 2024"
 
 
 
@@ -1929,6 +1980,21 @@ for(let i =0; i <x; i++){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+document.body.appendChild(myHead)
+document.body.appendChild(myContent)
+document.body.appendChild(foot)
 
 
 
