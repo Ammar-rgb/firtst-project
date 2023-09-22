@@ -1975,53 +1975,114 @@ right case till you see any break if exists*/
 // foot.innerText="Copyright 2024"
 
 
+// document.body.appendChild(myHead)
+// document.body.appendChild(myContent)
+// document.body.appendChild(foot)
+
+// ----------------------------------------------------------------------------------------------------------------------------
+
+
+
+// let myDiv = document.querySelector(".one")
+// myDiv.toggle("one")
+
+// ----------------------------------------------------
+
+
+
+// let addCls = document.querySelector(".classes-to-add");
+// let rmCls = document.querySelector(".classes-to-remove");
+// let current = document.querySelector("[title = Current]");
+// let show = document.querySelector(".show")
+// let span = document.createElement("span")
+
+
+// addCls.onblur = function(){
+//     if(addCls.value != ""){
+//         let x = addCls.value.toLowerCase().split(" ")
+//         for(let i = 0 ; i < x.length ; i++){
+//             current.classList.add(x[i])
+//         }
+//         addCls.value=""
+//     }
+
+// }
+
+// rmCls.onblur = function(){
+//     if(rmCls.value != ""){
+//         let x = rmCls.value.split(" ")
+//         for(let i = 0 ; i < x.length ; i++){
+//             current.classList.remove(x[i])
+//         }
+//         rmCls.value=""
+//     }
+// }
+
+// addCls.addEventListener("blur", showCls)
+// rmCls.addEventListener("blur", showCls)
+
+// function showCls (){
+//     show.innerHTML="";
+//     if(current.classList[0] != undefined ){
+//         let x = Array.from(current.classList)
+//         x.sort()
+//         for (let i=0; i< x.length; i++){
+//             span.innerText= `${x[i]}`
+//             show.appendChild(span.cloneNode(true))
+//         }
+//     }else{
+//         span.innerText="No Classes To Show"
+//         show.appendChild(span)
+//     }
+
+// }
 
 
 
 
+// --------------------------------------------------------------
+// let first = document.createElement("div")
+// let end = document.createElement("div")
+// let myDiv = document.querySelector(".our-element")
+// first.innerText="Start"
+// end.innerText="End"
+// first.className="start"
+// end.className="end"
+// first.setAttribute("title", "start element")
+// end.setAttribute("title", "end element")
+// let myP = document.querySelector("p")
+// myP.remove()
+// myDiv.before(first)
+// myDiv.after(end)
+
+// ------------------------------------------------
+// let myDiv = document.querySelector("div")
+// let word = myDiv.lastChild.data.split("").filter((e)=> e != "\n" && e != " ").join("")
+// console.log(word.length)
+
+// ----------------------------------------------------
+
+// document.addEventListener("click", function(e){console.log(`This Is ${e.target.nodeName}`)})
+// --------------------------------------------------------
 
 
+// let gg = document.querySelectorAll("a")[0] 
+// let zz = document.querySelectorAll("a")[1]
+// let fc = document.querySelectorAll("a")[2]
+// let li = document.querySelectorAll("a")[3]
 
-
-
-
-
-
-
-
-
-
-
-document.body.appendChild(myHead)
-document.body.appendChild(myContent)
-document.body.appendChild(foot)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// function changePos () {
+//     gg.style.cssText = `left : ${screen.width - Math.floor(Math.random()* screen.width)}px; top : ${screen.height - Math.floor(Math.random()* screen.height)}px `
+// zz.style.cssText = `left : ${screen.width - Math.floor(Math.random()* screen.width)}px; top : ${screen.height - Math.floor(Math.random()* screen.height)}px `
+// fc.style.cssText = `left : ${screen.width - Math.floor(Math.random()* screen.width)}px; top : ${screen.height - Math.floor(Math.random()* screen.height)}px `
+// li.style.cssText = `left : ${screen.width - Math.floor(Math.random()* screen.width)}px; top : ${screen.height - Math.floor(Math.random()* screen.height)}px `
+// }
+// window.setInterval(changePos, 3000)
+// document.addEventListener("click", function(e){
+//     if(e.target.className === "open" && e.target.innerText != "Elzero"){
+//         e.preventDefault()
+//     }
+// })
 
 
 
