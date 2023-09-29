@@ -2084,5 +2084,151 @@ right case till you see any break if exists*/
 //     }
 // })
 
+// ---------------------------------------------------------
+
+// function sayMsg (user){
+//     console.log(`i am message for ${user}`)
+// }
+
+
+
+// setTimeout(sayMsg, 3000, 'Ammar')
+
+
+// function sayMsg (user, age){
+//         console.log(`i am message for ${user}, his age is ${age}`)
+//     }
+//     setTimeout(sayMsg, 3000, 'Ammar', 20)
+
+
+// function sayMsg (user, age){
+//         console.log(`i am message for ${user}, his age is ${age}`)
+//     }
+//     let counter = setTimeout(sayMsg, 3000, 'Ammar', 20)
+
+// let btn = document.querySelector("button")
+// btn.onclick = function(){
+//     clearTimeout(counter)
+// }
+
+// let counter = setInterval(function(){
+//     console.log('siii')
+// },3000)
+
+
+
+// let div = document.querySelector("div")
+// function countDown(){
+//     div.innerHTML -= 1
+//     if (div.innerHTML === "3"){
+//         clearInterval(counter)
+//     }
+// }
+// let counter = setInterval(countDown, 2000)
+
+
+// ------------------------------------------------------------
+// console.log(location.hash)
+// ------------------------------------------------------
+
+// let x = window.prompt("print Number from -to", "example: 5-20")
+// let y = x.replaceAll(" ","").split("-").reduce((acc, e)=> +e > +acc ? e : acc)
+// let w = x.replaceAll(" ","").split("-").reduce((acc, e)=> +e < +acc ? e : acc)
+// let loopArr = x.replaceAll(" ","").split("-")
+// let p = document.createElement("p");
+// if(loopArr.length == 2){
+//     for(let i = +w; i <= +y; i++){
+//         p.innerHTML = `${i}`;
+//         document.body.appendChild(p.cloneNode(true));
+//     }
+// }else{
+//     document.write("not valid value")
+// }
+
+// ---------------------------------------------------------------
+
+// let form = document.querySelector(".main")
+// setTimeout(function(){
+//     form.style.display = "inline-flex"
+// },3000)
+// let btn = document.querySelector("input")
+// btn.onclick= function(){
+//     form.style.display = "none"
+// }
+// --------------------------------------------------------
+// let counter = document.querySelector("div");
+// let x = 10;
+// counter.innerHTML = x
+// let count = setInterval(function(){
+//     counter.innerHTML -=1
+//     if(counter.innerHTML == 5){
+//         window.open("https://Elzero.org", "_blank", "width= 600, height=600")
+//     }else if(counter.innerHTML== 0 ){
+//         clearInterval(count)
+//     }
+// }, 1000)
+
+// ------------------------------------------------------------
+
+// const x = [1,6,5]
+// console.log(x)
+// x = [1,5,6] //erorrrrr
+
+
+// x.sort() //trueeee
+// console.log(x)
+
+
+// x[0] = 9 //trueeeee
+// console.log(x)
+
+// note : the const keyword in JavaScript provides immutability
+//  to variables themselves, not the values they hold.
+//   When an array is declared with const,
+//    it means you cannot reassign the variable to a new array,
+//  but you can still modify the elements of the array.
+
+// --------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

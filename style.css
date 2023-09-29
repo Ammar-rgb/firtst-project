@@ -117,9 +117,54 @@ a:visited {
 /* ----------------------------------------------- */
 
 
+/*
+ * {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background-image: url("//unsplash.it/1000");
+}
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
+.main {
+  background-color:#eeeeee6c;
+  width: 70%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  box-shadow: 3px 3px 20px gray, -3px -3px 20px gray;
+  border-radius: 5px;
+  transition:all 4000ms;
+  display: none;
 
+}
+
+input {
+  padding: 5px 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  right:0;
+  top: 0;
+  transform: translate(40%, -30%);
+  cursor: pointer;
+} */
+
+/* -------------------------------------------------------- */
 
 
 
