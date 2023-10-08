@@ -2140,6 +2140,11 @@ right case till you see any break if exists*/
 // ----------------------------------------------------
 
 // faileddddddddddddddddddddddddddddddddddddddddddddddddd
+// important noteeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+// i got the error because : Form elements must have
+//  labels: Element has no title attribute Element has no placeholder attribute
+// A form field element should have an id or name attribute
+
 
 const addRandomId = function () {
   let x = Math.floor(Math.random() * 79734539705297 + 1);
@@ -2150,7 +2155,7 @@ const addRandomId = function () {
 let input = document.querySelector(".input");
 let add = document.querySelector(".add");
 let tasks = document.querySelector(".tasks");
-//   -------------------------------------------------------------
+  // -------------------------------------------------------------
 
 if (!localStorage.getItem("tasks")) {
   localStorage.setItem("tasks", JSON.stringify([]));
@@ -2158,13 +2163,14 @@ if (!localStorage.getItem("tasks")) {
 add.addEventListener("click", function () {
   if (input.value != "") {
     let storedTasks = JSON.parse(window.localStorage.tasks);
+    storedTasks.for
     storedTasks.push({ title: input.value, id: addRandomId() });
     window.localStorage.setItem("tasks", JSON.stringify(storedTasks));
 
     let newTask = document.createElement("div");
     let command = document.createElement("p");
     let del = document.createElement("button");
-    del.textContent = "button";
+    del.textContent = "Delete";
     command.textContent = input.value;
     newTask.appendChild(command);
     newTask.appendChild(del);
