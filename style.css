@@ -165,6 +165,151 @@ input {
 } */
 
 /* -------------------------------------------------------- */
+/* 
+.exp {
+  width: 200px;
+  height: 150px;
+  background-color: red;
+}
+
+
+ul {
+  display: flex;
+  justify-content: flex-start;
+}
+li {
+  width: 40px;
+  height: 40px;
+  list-style: none;
+}
+
+ul li {
+background-color: red;
+}
+
+li:first-child {
+  background-color: blue;
+}
+
+li:last-child {
+  background-color: black;
+} */
+/* ------------------------------------------------------------ */
+/* failedddddddddddddddddddddddddddddddddddd */
+* {
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-color: white;
+  height: 100vh;
+  gap: 20px;
+
+}
+
+
+form {
+  background-color: #eee;
+  min-height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5px;
+  width: 60% ;
+}
+
+.input {
+  padding: 10px;
+  flex-grow: 0.9;
+  
+}
+
+.add {
+  padding: 10px;
+  background-color: orangered;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.tasks {
+  background-color: #eee;
+  width: 60%;
+  min-height: 70px;
+  padding: 0 10px;
+}
+
+/* ------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

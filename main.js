@@ -1388,7 +1388,7 @@ right case till you see any break if exists*/
 //noteeeeeeeeeeeee: when i used arrow function i got the window object
 //but when i used normal anonymous function i got the button
 // Arrow functions do not have their own `this` value because
-// they are designed to maintain the lexical scope of the surrounding context. 
+// they are designed to maintain the lexical scope of the surrounding context.
 // arrow functions inherit the `this` value from the surrounding (lexical) scope in which they are defined.
 // This means that the value of `this` inside an arrow function is the same as the value of `this` outside the arrow function.
 // document.getElementById("cl").onclick=function(){
@@ -1646,8 +1646,7 @@ right case till you see any break if exists*/
 // // append element to body
 // document.body.appendChild(myElement)
 
-
-// noteeee : ican edit the element i appended 
+// noteeee : ican edit the element i appended
 // let myDiv = document.createElement("div");
 // let heading = document.createElement("h2");
 // let para = document.createElement("p");
@@ -1660,18 +1659,15 @@ right case till you see any break if exists*/
 //     document.body.appendChild(myDiv.cloneNode(true))
 // }
 
-
-
-
 // very important noteeeeeeeeeeeee
 // In your code, variables such as myDiv, heading, para, headtext, and paratext are declared and initialized within the loop in each iteration.
 //  This means that in each iteration, new instances of these variables are created, effectively overwriting the previous values.
 // Within the loop, JavaScript allows you to declare and initialize variables multiple times with the same name because each iteration creates a new scope.
-//  Each iteration of the loop creates a separate execution context, and variables declared with let or const are block-scoped, 
+//  Each iteration of the loop creates a separate execution context, and variables declared with let or const are block-scoped,
 // meaning they exist only within that specific block or iteration.
-// However, outside the loop, redeclaring variables with the same name using let or const would result in an error 
+// However, outside the loop, redeclaring variables with the same name using let or const would result in an error
 // because variables with block scope cannot be redeclared in the same scope.
-// To summarize, in your specific code, new variables are created in each iteration within the loop, 
+// To summarize, in your specific code, new variables are created in each iteration within the loop,
 // but you cannot redeclare variables with the same name using let or const outside the loop in the same scope.
 
 // for(let i=1;i<=100;i++){
@@ -1699,18 +1695,10 @@ right case till you see any break if exists*/
 // console.log(myElement.firstElementChild)
 // console.log(myElement.lastElementChild)
 
-
-
-
 // let ff = document.getElementById("ff");
 // ff.onfocus = function(){
 //     ff.setAttribute("placeholder","write here")
 // }
-
-
-
-
-
 
 // In all three code examples, you will get the same
 // result because the `event` object is automatically
@@ -1720,27 +1708,26 @@ right case till you see any break if exists*/
 // takes the `event` object as a parameter and logs it
 // to the console. This will work as expected and log the `event` object.
 
-// In the second example, the event handler function 
+// In the second example, the event handler function
 // does not explicitly define any parameters.
-// However, the `event` object is still automatically 
+// However, the `event` object is still automatically
 // passed as an argument to the function. By omitting
 // the parameter, you are essentially choosing not to
 // use the `event` object. However, since the `event`
-// object is still available in the function scope, you 
+// object is still available in the function scope, you
 // can access it using the `event` keyword. So, you will
 // still get the same result when logging `event` to the console.
 
 // In the third example, the event handler function
-// takes a parameter named `e`. This parameter is 
+// takes a parameter named `e`. This parameter is
 // used to capture the `event` object. By logging `e`
 // to the console, you will get the same result as
 // logging `event` in the previous examples.
 
-// So, in all three cases, you will get the same result 
-// because the `event` object is automatically 
-// available in the event handler function, whether 
+// So, in all three cases, you will get the same result
+// because the `event` object is automatically
+// available in the event handler function, whether
 // you explicitly define a parameter for it or not.
-
 
 // document.links[0].onclick=function(event){
 //     console.log(event)
@@ -1754,19 +1741,10 @@ right case till you see any break if exists*/
 //     console.log(e)
 // }
 
-
-
-
-
 // document.links[0].onclick=function(e){
 //     console.log(e)
 //     e.preventDefault();
 // }
-
-
-
-
-
 
 // let userInput = document.querySelector("[name = 'username']")
 
@@ -1782,12 +1760,7 @@ right case till you see any break if exists*/
 //     }
 // }
 
-
-
-
-
-
-// noteeee : queryselector return the first element found 
+// noteeee : queryselector return the first element found
 // and queryselectorall reterns an array called node list
 //and getelements by tagname or classname returns and array called html collection
 // let myDiv= document.querySelector("div");
@@ -1817,7 +1790,6 @@ right case till you see any break if exists*/
 //     myImg[i].setAttribute("alt", "Elzero Logo")
 // }
 
-
 // let doller = document.querySelector("[name='dollar']")
 // let rs = document.querySelector(".result")
 
@@ -1835,9 +1807,6 @@ right case till you see any break if exists*/
 //     rs.innerText= `{${doller.value}} USD Dollar = {${(doller.value * 30.6).toFixed(2)}} Egyptian Pound`
 // }
 
-
-
-
 // let doller = document.querySelector("[name='dollar']");
 // let rs = document.querySelector(".result");
 
@@ -1850,10 +1819,6 @@ right case till you see any break if exists*/
 // doller.addEventListener("keyup", updateResult);
 // doller.addEventListener("mouseup", updateResult);
 
-
-
-
-
 // let first = document.querySelector(".one")
 // let second = document.querySelector(".two")
 // let script= document.querySelector("script")
@@ -1865,9 +1830,6 @@ right case till you see any break if exists*/
 // document.body.appendChild(first)
 // document.body.appendChild(script)
 
-
-
-
 // let myImg = document.querySelectorAll("[decoding= 'async']")
 // for (let i=0; i<myImg.length; i++){
 //     if(myImg[i].hasAttribute("alt")){
@@ -1876,12 +1838,6 @@ right case till you see any break if exists*/
 //         myImg[i].setAttribute("alt", "Elzero New")
 //     }
 // }
-
-
-
-
-
-
 
 // let form = document.querySelector("form")
 // let ele = document.querySelector("[name='elements']")
@@ -1892,12 +1848,10 @@ right case till you see any break if exists*/
 // let di = document.createElement("div")
 // let se = document.createElement("section")
 
-
 // di.className="di";
 // se.className="se"
 // di.setAttribute("title","Element")
 // se.setAttribute("title", "Element")
-
 
 // form.onsubmit= function(event){
 //     event.preventDefault();
@@ -1918,13 +1872,11 @@ right case till you see any break if exists*/
 
 // }
 
-
 // noteeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee the will not cause error it won't just work
 // let x = "d"
 // for(let i =0; i <x; i++){
 //     console.log('ss')
 // }
-
 
 // let myHead = document.createElement("header")
 // let myLogo = document.createElement("div")
@@ -1964,16 +1916,11 @@ right case till you see any break if exists*/
 //     myContent.appendChild(product.cloneNode(true))
 // }
 
-
-
 // // ---------------------------------------------------------
-
-
 
 // let foot = document.createElement("div")
 // foot.style.cssText="background-color : rgb(2 163 90); padding: 15px; color:white; text-align : center; font-weight : bold "
 // foot.innerText="Copyright 2024"
-
 
 // document.body.appendChild(myHead)
 // document.body.appendChild(myContent)
@@ -1981,21 +1928,16 @@ right case till you see any break if exists*/
 
 // ----------------------------------------------------------------------------------------------------------------------------
 
-
-
 // let myDiv = document.querySelector(".one")
 // myDiv.toggle("one")
 
 // ----------------------------------------------------
-
-
 
 // let addCls = document.querySelector(".classes-to-add");
 // let rmCls = document.querySelector(".classes-to-remove");
 // let current = document.querySelector("[title = Current]");
 // let show = document.querySelector(".show")
 // let span = document.createElement("span")
-
 
 // addCls.onblur = function(){
 //     if(addCls.value != ""){
@@ -2037,9 +1979,6 @@ right case till you see any break if exists*/
 
 // }
 
-
-
-
 // --------------------------------------------------------------
 // let first = document.createElement("div")
 // let end = document.createElement("div")
@@ -2065,8 +2004,7 @@ right case till you see any break if exists*/
 // document.addEventListener("click", function(e){console.log(`This Is ${e.target.nodeName}`)})
 // --------------------------------------------------------
 
-
-// let gg = document.querySelectorAll("a")[0] 
+// let gg = document.querySelectorAll("a")[0]
 // let zz = document.querySelectorAll("a")[1]
 // let fc = document.querySelectorAll("a")[2]
 // let li = document.querySelectorAll("a")[3]
@@ -2090,16 +2028,12 @@ right case till you see any break if exists*/
 //     console.log(`i am message for ${user}`)
 // }
 
-
-
 // setTimeout(sayMsg, 3000, 'Ammar')
-
 
 // function sayMsg (user, age){
 //         console.log(`i am message for ${user}, his age is ${age}`)
 //     }
 //     setTimeout(sayMsg, 3000, 'Ammar', 20)
-
 
 // function sayMsg (user, age){
 //         console.log(`i am message for ${user}, his age is ${age}`)
@@ -2115,8 +2049,6 @@ right case till you see any break if exists*/
 //     console.log('siii')
 // },3000)
 
-
-
 // let div = document.querySelector("div")
 // function countDown(){
 //     div.innerHTML -= 1
@@ -2125,7 +2057,6 @@ right case till you see any break if exists*/
 //     }
 // }
 // let counter = setInterval(countDown, 2000)
-
 
 // ------------------------------------------------------------
 // console.log(location.hash)
@@ -2174,10 +2105,8 @@ right case till you see any break if exists*/
 // console.log(x)
 // x = [1,5,6] //erorrrrr
 
-
 // x.sort() //trueeee
 // console.log(x)
-
 
 // x[0] = 9 //trueeeee
 // console.log(x)
@@ -2190,45 +2119,59 @@ right case till you see any break if exists*/
 
 // --------------------------------------------------------------
 
+// let div= document.querySelector(".exp")
+// let lis = document.querySelectorAll("ul li")
 
+// if(window.localStorage.color){
+//     div.style.backgroundColor=window.localStorage.color
+//     lis.forEach((li)=>{li.classList.remove("active")})
+//     document.querySelector(`[data-color=${window.localStorage.color}]`).classList.add("active")
+// }
 
+// lis.forEach((li) => {
+//     li.addEventListener("click", function(e){
+//         window.localStorage.color=li.dataset.color
+//         div.style.backgroundColor=window.localStorage.color
+//         lis.forEach((li)=>{li.classList.remove("active")})
+//         li.classList.add("active")
+//     })
+// })
 
+// ----------------------------------------------------
 
+// faileddddddddddddddddddddddddddddddddddddddddddddddddd
 
+const addRandomId = function () {
+  let x = Math.floor(Math.random() * 79734539705297 + 1);
+  return x;
+};
+//   -----------------------------------------------------------
 
+let input = document.querySelector(".input");
+let add = document.querySelector(".add");
+let tasks = document.querySelector(".tasks");
+//   -------------------------------------------------------------
 
+if (!localStorage.getItem("tasks")) {
+  localStorage.setItem("tasks", JSON.stringify([]));
+}
+add.addEventListener("click", function () {
+  if (input.value != "") {
+    let storedTasks = JSON.parse(window.localStorage.tasks);
+    storedTasks.push({ title: input.value, id: addRandomId() });
+    window.localStorage.setItem("tasks", JSON.stringify(storedTasks));
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    let newTask = document.createElement("div");
+    let command = document.createElement("p");
+    let del = document.createElement("button");
+    del.textContent = "button";
+    command.textContent = input.value;
+    newTask.appendChild(command);
+    newTask.appendChild(del);
+    tasks.appendChild(newTask);
+    del.addEventListener("click", function () {
+      newTask.remove();
+    });
+    input.value = "";
+  }});
+// ---------------------------------------------------------------
