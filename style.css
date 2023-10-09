@@ -196,7 +196,7 @@ li:last-child {
 } */
 /* ------------------------------------------------------------ */
 /* failedddddddddddddddddddddddddddddddddddd */
-* {
+/* * {
   box-sizing: border-box;
 }
 .container {
@@ -211,7 +211,7 @@ li:last-child {
 }
 
 
-form {
+.form {
   background-color: #eee;
   min-height: 70px;
   display: flex;
@@ -242,16 +242,20 @@ form {
   width: 60%;
   min-height: 70px;
   padding: 0 10px;
-}
+} */
 
 /* ------------------------------------------------------- */
 
 
 
+/* .container * {
+  padding: 10px;
+  font-family:'Open Sans', sans-serif;
+  font-size: 16px;
+  color: green;
+} */
 
-
-
-
+/* ------------------------------------------------------------- */
 
 
 

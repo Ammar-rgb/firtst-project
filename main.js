@@ -2146,38 +2146,211 @@ right case till you see any break if exists*/
 // A form field element should have an id or name attribute
 
 
-const addRandomId = function () {
-  let x = Math.floor(Math.random() * 79734539705297 + 1);
-  return x;
-};
-//   -----------------------------------------------------------
+// const addRandomId = function () {
+//   let x = Math.floor(Math.random() * 79734539705297 + 1);
+//   return x;
+// };
+// //   -----------------------------------------------------------
 
-let input = document.querySelector(".input");
-let add = document.querySelector(".add");
-let tasks = document.querySelector(".tasks");
-  // -------------------------------------------------------------
+// let input = document.querySelector(".input");
+// let add = document.querySelector(".add");
+// let tasks = document.querySelector(".tasks");
+//   // -------------------------------------------------------------
 
-if (!localStorage.getItem("tasks")) {
-  localStorage.setItem("tasks", JSON.stringify([]));
-}
-add.addEventListener("click", function () {
-  if (input.value != "") {
-    let storedTasks = JSON.parse(window.localStorage.tasks);
-    storedTasks.for
-    storedTasks.push({ title: input.value, id: addRandomId() });
-    window.localStorage.setItem("tasks", JSON.stringify(storedTasks));
+// if (!localStorage.getItem("tasks")) {
+//   localStorage.setItem("tasks", JSON.stringify([]));
+// }
+// let previousStored = JSON.parse(window.localStorage.tasks);
+// previousStored.forEach((e)=>{
+//   let newTask = document.createElement("div");
+//   let command = document.createElement("p");
+//   let del = document.createElement("button");
+//   del.textContent = "Delete";
+//   command.textContent = e.title;
+//   newTask.appendChild(command);
+//   newTask.appendChild(del);
+//   tasks.appendChild(newTask);
+//   del.addEventListener("click", function () {
+//     let index = previousStored.findIndex((task)=> task.title === command.textContent);
+//     if(index != -1){
+//       previousStored.splice(index,1)
+//     }
+//     newTask.remove();
+    
+//   });
+//   window.localStorage.setItem("tasks", JSON.stringify(previousStored));
+// })
 
-    let newTask = document.createElement("div");
-    let command = document.createElement("p");
-    let del = document.createElement("button");
-    del.textContent = "Delete";
-    command.textContent = input.value;
-    newTask.appendChild(command);
-    newTask.appendChild(del);
-    tasks.appendChild(newTask);
-    del.addEventListener("click", function () {
-      newTask.remove();
-    });
-    input.value = "";
-  }});
+
+// add.addEventListener("click", function () {
+//   if (input.value != "") {
+//     let storedTasks = JSON.parse(window.localStorage.tasks);
+//     storedTasks.push({ title: input.value, id: addRandomId() });
+//     window.localStorage.setItem("tasks", JSON.stringify(storedTasks));
+
+
+//     let newTask = document.createElement("div");
+//     let command = document.createElement("p");
+//     let del = document.createElement("button");
+//     del.textContent = "Delete";
+//     command.textContent = input.value;
+//     newTask.appendChild(command);
+//     newTask.appendChild(del);
+//     tasks.appendChild(newTask);
+//     del.addEventListener("click", function () {
+//       newTask.remove();
+//     });
+//     input.value = "";
+//   }});
 // ---------------------------------------------------------------
+// noteeeeeeeeeeeeeeeeee
+// When you use the cssText property to set the
+//  CSS styles for an element, it replaces any existing inline 
+// styles that were previously applied to that element. 
+// The cssText property allows you to set the entire inline style for an element,
+//  including all the CSS properties and their values.
+// it allows you to set or overwrite the entire inline style for an element
+//  using a single string value that includes all the CSS properties and their values.
+
+
+// when you use the cssText property to set the inline style for an element, 
+// it overwrites any existing inline styles, including those set in the HTML document itself.
+// The cssText property replaces the entire inline style for
+//  an element with the provided value as a string. This
+//   means that any previously set inline styles using dot
+//    notation or written directly in the HTML document will be lost.
+// If you want to preserve existing inline styles and modify 
+// specific CSS properties individually, you should use dot
+//  notation (e.style.propertyName) to set each property separately, instead of using cssText
+
+
+
+// let container = document.querySelectorAll(".container *")
+// let fontFamily = document.getElementById("selectFont");
+// let fontSize = document.getElementById("size");
+// let fontColor = document.getElementById("color")
+
+// if (window.localStorage.getItem('fontColor') && window.localStorage.getItem('fontFamily') && window.localStorage.getItem('fontSize')){
+//   container.forEach((e)=>{
+//     e.style.cssText=`font-size:${window.localStorage.fontSize}px; color: ${window.localStorage.fontColor}`
+//     if( window.localStorage.fontFamily=== 'Open'){
+//       container.forEach((e)=>{e.style.cssText = `font-family: Open Sans, sans-serif;`})
+//     }else if (window.localStorage.fontFamily === 'Roboto'){container.forEach((e)=>{e.style.cssText = `font-family: Roboto, sans-serif;`})}
+//     else{ container.forEach((e)=>{e.style.cssText = `font-family: Cairo, sans-serif;`})}
+//   })
+// }
+// // noteeeeeeeeeeeeeeeeeeee this refered to the event element
+// fontColor.onchange = function(){
+//   window.localStorage.fontColor = this.value;
+//   container.forEach((e)=>{
+//     e.style.color=this.value
+//   })
+// }
+
+// fontSize.onchange = function(){
+//   window.localStorage.fontSize = this.value;
+//   container.forEach((e)=>{
+//     e.style.fontSize = `${this.value}px`
+//   })
+// }
+
+// fontFamily.onchange = function(){
+//   window.localStorage.fontFamily = this.value;
+//   if(this.value === 'Open'){
+//     container.forEach((e)=>{e.style.cssText = `font-family: Open Sans, sans-serif;`})
+//   }else if (this.value === 'Roboto'){container.forEach((e)=>{e.style.cssText = `font-family: Roboto, sans-serif;`})}
+//   else{ container.forEach((e)=>{e.style.cssText = `font-family: Cairo, sans-serif;`})}
+// }
+
+// ----------------------------------------------------------------------------------------------------------------------------------
+
+// let container = document.querySelectorAll(".container *");
+// let fontFamily = document.getElementById("selectFont");
+// let fontSize = document.getElementById("size");
+// let fontColor = document.getElementById("color");
+
+// if (
+//   window.localStorage.getItem("fontColor") &&
+//   window.localStorage.getItem("fontFamily") &&
+//   window.localStorage.getItem("fontSize")
+// ) {
+//   container.forEach((e) => {
+//     e.style.fontSize = `${window.localStorage.fontSize}px`;
+//     e.style.color = window.localStorage.fontColor;
+
+//     if (window.localStorage.fontFamily === "Open") {
+//       e.style.fontFamily = "Open Sans, sans-serif";
+//     } else if (window.localStorage.fontFamily === "Roboto") {
+//       e.style.fontFamily = "Roboto, sans-serif";
+//     } else {
+//       e.style.fontFamily = "Cairo, sans-serif";
+//     }
+//   });
+// }
+
+// fontColor.onchange = function () {
+//   window.localStorage.fontColor = this.value;
+//   container.forEach((e) => {
+//     e.style.color = this.value;
+//   });
+// };
+
+// fontSize.onchange = function () {
+//   window.localStorage.fontSize = this.value;
+//   container.forEach((e) => {
+//     e.style.fontSize = `${this.value}px`;
+//   });
+// };
+
+// fontFamily.onchange = function () {
+//   window.localStorage.fontFamily = this.value;
+//   container.forEach((e) => {
+//     if (this.value === "Open") {
+//       e.style.fontFamily = "Open Sans, sans-serif";
+//     } else if (this.value === "Roboto") {
+//       e.style.fontFamily = "Roboto, sans-serif";
+//     } else {
+//       e.style.fontFamily = "Cairo, sans-serif";
+//     }
+//   });
+// };
+
+// ------------------------------------------------------------------------------------------------
+
+// let input = document.querySelectorAll(".input")
+// input[0].value= window.sessionStorage.first;
+// input[1].value= window.sessionStorage.second;
+// input[2].value= window.sessionStorage.third;
+// input[3].value= window.sessionStorage.fourth;
+
+// input.forEach((e)=>{
+//   if(e.value ==='undefined'){
+//     e.value='';
+//   }
+//   e.addEventListener("change", function(){
+//     window.sessionStorage.setItem(`${this.classList[1]}`, this.value)
+//   })
+// })
+
+// -------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
