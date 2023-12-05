@@ -23,6 +23,8 @@
 // </div>`;
 // document.write(container.repeat(4))
 
+// ------------------------------------------------------------------
+// console.log("%c ammar", "color: red")
 // console.log(2**4);
 // console.log(11%2)
 
@@ -123,21 +125,29 @@
 // console.log(cr.lastIndexOf('mansour',-8));
 
 // let cr = "ammar mohamed mansour ramadan\n";
+// // Doesn't affect the main string
 // console.log(cr.slice())
 // console.log(cr.slice(5));
 // console.log(cr.slice(0, 5));
 // console.log(cr.slice(-8, -3));
 // console.log(cr.repeat(4))
+// cr.slice(2, 6);
+// console.log(cr)
+
 
 // let cr = "ammar mohamed mansour ramadan";
+// // Doesn't affect the main string
 // console.log(cr.split());
 // console.log(cr.split(""));
 // console.log(cr.split(' '));
-// console.log(cr.split(' ',2))
+// console.log(cr.split(' ',2));
+// cr.split(' ',2)
+// console.log(cr)
+
 
 // let cr = "ammar mohamed mansour ramadan";
 // console.log(cr.substring());
-// console.log(cr.substring(5,13));
+// console.log(cr.substring(5,13)); //Can Switch Between Start And End
 // console.log(cr.substring(13,5));
 // console.log(cr.slice(13,5)); //not working
 // console.log(cr.slice(-8));    //working
@@ -159,11 +169,12 @@
 // console.log(cr.substring(5));
 // console.log(cr.substring(0,5));  // 5=>index
 // console.log(cr.substr(5,3))  //3 => how many indexes
-// console.log(cr.substr(0,5))
-// console.log(cr.substr(-7))
+// console.log(cr.substr(0,5)) // substr's second value is the number of indexes
+// console.log(cr.substr(-7)) // can take a negative value
 // console.log(cr.substr(-7,4))
+// console.log(cr.substr(4,-7)) // can't switch between values
 // console.log(cr.length)
-// console.log(cr.substr(29))
+// console.log(cr.substr(28)) // codsiders the first value is start
 // console.log(cr.substring(29))
 // console.log(cr.substr(-7,4))
 
@@ -272,7 +283,7 @@
 //     ? console.log(">40")
 //     : console.log("unknown");
 
-// let st='Elzero Web School';
+// let st='Elzero Web School'
 // if((st.length*2).toString() ==='34' ){
 //     console.log('good')
 // }
@@ -286,7 +297,6 @@
 // if(st!=='string'){
 //     console.log('good')
 // }
-
 // if(typeof(st.length)==='number'){
 //     console.log('good')
 // }
@@ -446,10 +456,14 @@ right case till you see any break if exists*/
 // console.log(arr)
 // console.log(arr.length)
 
-// let arr = ["ammar", "somooo","momo"]
+// let arr = ["ammar", "somooo","momo"];
 // arr.length=2;
-// arr[4]='dfdo'
-// console.log(arr)
+// arr[4]='dfdo';
+// console.log(arr);
+// let first = arr.shift()
+// console.log(first)
+// let last = arr.pop()
+// console.log(last)
 
 // let arr = ["ammar", "somooo", "momo"];
 // console.log(arr);
@@ -478,22 +492,47 @@ right case till you see any break if exists*/
 // arr.includes("mimi") === true ? console.log("found") : console.log("not found");
 // arr.indexOf("momo") === -1 ? console.log("not found") : console.log("found");
 
-// shift, pop, unshift, push, splice affect the original array meanwhile slice doesn't affect the new array and makes a new one
+// shift, pop, unshift, push, splice affect the original array meanwhile,
+//  slice doesn't affect the main array and makes a new one
 
 // let arr = ["ammar",23, "somooo",10, "momo",1000,'10', "ohayo",-5, "yamero"];
 // console.log(arr);
 // console.log(arr.sort());
 // console.log(arr.reverse())
 
+
+
 // let arr = ["ammar", "somooo", "momo", "ohayo", "yamero"];
-// console.log(arr.slice(1,-1))
+// let mm = arr.slice(1,-1);
+// console.log(mm)
 // console.log(arr)
+// console.log(arr.slice(1,-1))
+// let ss = arr.splice(0, 1, 'fdfd')
+// console.log(ss) // return the cut part in an array
+// let ss = arr.shift()
+// console.log(ss) // return the cut part but not in array
+// let ss = arr.pop()
+// console.log(ss) //return the cut part but not in array
+// let ss = arr.push('gogo') 
+// console.log(ss) // return the new length of the array
+// let ss = arr.unshift('gogo')
+// console.log(ss) // return the new length of the array
+// console.log(arr)
+
+// let aro = [4, 5, 3];
+// let mro = [9, 3, 2];
+// console.log(aro + mro)
+// console.log(aro.concat(mro))
+// let sro = aro + mro;
+// console.log(sro)
+
 
 // let arr = ["ammar", "somooo", "momo", "ohayo", "yamero"];
 // console.log(arr)
 // arr.splice(0,0,'samir','eren')
 // console.log(arr)
-// arr.splice(0,2)
+// let rm = arr.splice(0,2)
+// console.log(rm)
 // console.log(arr)
 // arr.splice(0,1,'samir','eren')
 // console.log(arr)
@@ -521,6 +560,8 @@ right case till you see any break if exists*/
 // let zero = 0;
 // let counter = 3;
 // let my = ["ahmed", "mazero", "elham", "osama", "gamal", "ameer"];
+// my = my.slice(0, my.indexOf('osama') + 1 )
+// console.log(my.reverse())
 // let x = my.splice(0,3)
 // console.log(my)
 // console.log(x)
@@ -2327,15 +2368,12 @@ right case till you see any break if exists*/
 //   if(e.value ==='undefined'){
 //     e.value='';
 //   }
-//   e.addEventListener("change", function(){
+//   e.addEventListener("input", function(){
 //     window.sessionStorage.setItem(`${this.classList[1]}`, this.value)
 //   })
 // })
-
+ 
 // -------------------------------------------------------------------
-
-
-
 
 
 
