@@ -134,7 +134,6 @@
 // cr.slice(2, 6);
 // console.log(cr)
 
-
 // let cr = "ammar mohamed mansour ramadan";
 // // Doesn't affect the main string
 // console.log(cr.split());
@@ -143,7 +142,6 @@
 // console.log(cr.split(' ',2));
 // cr.split(' ',2)
 // console.log(cr)
-
 
 // let cr = "ammar mohamed mansour ramadan";
 // console.log(cr.substring());
@@ -500,8 +498,6 @@ right case till you see any break if exists*/
 // console.log(arr.sort());
 // console.log(arr.reverse())
 
-
-
 // let arr = ["ammar", "somooo", "momo", "ohayo", "yamero"];
 // let mm = arr.slice(1,-1);
 // console.log(mm)
@@ -513,7 +509,7 @@ right case till you see any break if exists*/
 // console.log(ss) // return the cut part but not in array
 // let ss = arr.pop()
 // console.log(ss) //return the cut part but not in array
-// let ss = arr.push('gogo') 
+// let ss = arr.push('gogo')
 // console.log(ss) // return the new length of the array
 // let ss = arr.unshift('gogo')
 // console.log(ss) // return the new length of the array
@@ -525,7 +521,6 @@ right case till you see any break if exists*/
 // console.log(aro.concat(mro))
 // let sro = aro + mro;
 // console.log(sro)
-
 
 // let arr = ["ammar", "somooo", "momo", "ohayo", "yamero"];
 // console.log(arr)
@@ -726,6 +721,7 @@ right case till you see any break if exists*/
 // let myAdmins = ["ahmed", "osama", "sayed", "stop", "samera"];
 // let myEmployees = ["amgad","samah","ameer","omar","othman","amany","samia"];
 // let newAdmins=[];
+// let count = 0;
 // for(let i=0;i<myAdmins.length;i++){
 //     if(myAdmins[i]==='stop'){
 //         break;
@@ -743,7 +739,8 @@ right case till you see any break if exists*/
 //     </div>`)
 //     for(let j=0;j<myEmployees.length;j++){
 //         if(myEmployees[j][0]===newAdmins[i][0]){
-//             document.write(`<p> ${myEmployees[j]}</p>`)
+//             count++;
+//             document.write(`<p>-${count} ${myEmployees[j]}</p>`)
 //         }
 //     }
 // }
@@ -778,15 +775,23 @@ right case till you see any break if exists*/
 // }
 
 // let myAdmins = ["ahmed", "osama", "sayed", "stop", "samera"];
-// let myEmployees = ["amgad","samah","ameer","omar","othman","amany","samia"];
+// let myEmployees = [
+//     "amgad",
+//     "samah",
+//     "ameer",
+//     "omar",
+//     "othman",
+//     "amany",
+//     "samia",
+// ];
 
-// let newAdmins = myAdmins.slice(0, myAdmins.indexOf('stop'));
+// let newAdmins = myAdmins.slice(0, myAdmins.indexOf("stop"));
 // let order = 0;
 
 // document.write(`<div> we have ${newAdmins.length} admins</div><hr>`);
 
 // newAdmins.forEach((admin, index) => {
-//   document.write(`
+//     document.write(`
 //     <div>
 //       <hr>
 //       <p>The admin for team ${index + 1} is ${admin}</p>
@@ -794,12 +799,14 @@ right case till you see any break if exists*/
 //     </div>
 //   `);
 
-//   let teamMembers = myEmployees.filter(employee => employee.startsWith(admin[0]));
-//   teamMembers.forEach((member) => {
-//     document.write(`<p>${++order}- ${member}</p>`);
-//   });
+//     let teamMembers = myEmployees.filter((employee) =>
+//         employee.startsWith(admin[0])
+//     );
+//     teamMembers.forEach((member) => {
+//         document.write(`<p>${++order}- ${member}</p>`);
+//     });
 
-//   order = 0;
+//     order = 0;
 // });
 
 // function sayHello(name,age='unknown'){
@@ -862,6 +869,7 @@ right case till you see any break if exists*/
 // }
 
 // showInfo('osama',24,100,'y','sprot','writing')
+
 
 // function showDetails(a, b, c) {
 //     let order = [a, b, c];
@@ -987,9 +995,16 @@ right case till you see any break if exists*/
 
 // console.log(print(10,20));
 
+
 // function is completely block scope even var inside it
-//  isn local and also let. if id a block scope also but
-// var inside it is global.
+//  is local and also let. "if" is a block scope also but
+// var inside it is global and let is local.
+
+// if a variable is called in the local scope and it's
+// declared in the local scope, so it must be declared before calling
+
+
+
 // var a=1
 // var b=2
 // function showText(){
@@ -1066,12 +1081,13 @@ right case till you see any break if exists*/
 // console.log(calc(10,myNumbers[+false],myNumbers[+true]))
 
 // let myNumbers=[20,50,10,60];
+// console.log(myNumbers.toString())
 // let calc= function(one,two,...nums){
 //     return one+two+ Number(nums.toString())
 // }
 // console.log(calc(10,myNumbers[+false],myNumbers[+true]))
 
-// let nums=[1,2,3,4,5,6]
+// let nums=[1,2,3,4,5,6 ]
 // let newNums=[];
 // for(let i=0;i<nums.length;i++){
 //     newNums.push(nums[i]*2)
@@ -1149,7 +1165,7 @@ right case till you see any break if exists*/
 // let newNums = invertedNumbers.map((e) => (e === 0 ? (e = 0) : -e));
 // console.log(newNums);
 
-// let ignore = ignoreNumbers
+// let ignore = ignoreNumbers 
 //   .split("")
 //   .map((e) => (isNaN(+e) == true ? e : ""))
 //   .join("");
@@ -1164,6 +1180,13 @@ right case till you see any break if exists*/
 // let ignore=ignoreNumbers.split('').map((e)=>{ if(isNaN(+e)){return e}else{return ''}}).join('')
 // console.log(ignore)
 
+
+
+// let arr = [];
+// let newarr = arr.map(e => e + e)
+// console.log(newarr)
+
+
 // console.log(+'a')
 // console.log(parseInt('a'))
 // console.log(+'2')
@@ -1171,7 +1194,8 @@ right case till you see any break if exists*/
 // console.log(parseFloat('3.99'))
 // console.log(parseInt('2.99'))
 
-// The filter() method creates a new array filled with elements that pass a test provided by a function.
+// The filter() method creates a new array filled with elements
+//  that pass a test provided by a function.
 // The filter() method does not execute the function for empty elements.
 // The filter() method does not change the original array.
 //if there no elements pass the the test the filter outputs an empty array
@@ -1337,7 +1361,7 @@ right case till you see any break if exists*/
 //       return e == e.toUpperCase() ? acc : acc + e;
 //     });
 //   })
-//   .join(" ");
+//   .join(" "); 
 // console.log(solution);
 
 // let user={
@@ -1424,6 +1448,7 @@ right case till you see any break if exists*/
 // function say(){
 //     return this
 // }
+// console.log(say())
 // console.log(say()===window)
 
 //noteeeeeeeeeeeee: when i used arrow function i got the window object
@@ -1445,7 +1470,15 @@ right case till you see any break if exists*/
 //     ageInDays:function(){
 //         console.log(this)
 //         return this.age *365;
-//     },
+//     }}
+// console.log(user)
+// let newUser = new Object(user)
+// console.log(newUser)
+// let soUser = Object.create(user)
+// console.log(soUser)
+
+// Note the new object take the old object similarly 
+// but the 'object.create' take the old object as a prototype
 
 // };
 // console.log(user.age);
@@ -1474,13 +1507,14 @@ right case till you see any break if exists*/
 
 // let obj1 = {
 //   prop1: 1,
+//   prop2: 200,
 //   meth1: function () {
 //     return this.prop1;
 //   },
 // };
 
 // let obj2 = {
-//   prop2: 1,
+//   prop2: 100,
 //   meth2: function () {
 //     return this.prop2;
 //   },
@@ -1491,11 +1525,14 @@ right case till you see any break if exists*/
 //   prop3: 3,
 // };
 
-// if there two similar named properties it takes the prop in the source(obj1)
+// if there two similar named properties it takes the prop in the right source(obj1 or obj2) before target
 // noteeeee : the targetObject got affected
-// let finalObject= Object.assign(targetObject, obj1)
+// let finalObject= Object.assign(targetObject, obj1, obj2)
 // console.log(finalObject)
 // console.log(targetObject)
+
+// Also note the 'object.create' take the old object as a prototype
+// but assign and new make a similar object
 
 // let finalObject= Object.assign(targetObject, obj1,obj2)
 // console.log(finalObject)
@@ -1510,6 +1547,11 @@ right case till you see any break if exists*/
 //Erorrrrrrrrrrr
 // targetObject.assign(targetObject,obj2)
 // console.log(targetObject)
+// ---------------------------
+
+// targetObject = Object.assign(targetObject,obj1)
+// console.log(targetObject)
+// -------------------------------------
 
 // let name = "ammar";
 // let member = {
@@ -1724,10 +1766,9 @@ right case till you see any break if exists*/
 // myDiv.className = `product${i}`;
 // document.body.appendChild(myDiv)
 // }
-
 // let myElement=document.querySelector("div")
-// // children gets just the elements
-// // childNodes gets the elements, texts and comments. everything
+// // // children gets just the elements
+// // // childNodes gets the elements, texts and comments. everything
 // console.log(myElement.children)
 // console.log(myElement.children[0])
 // console.log(myElement.childNodes)
@@ -1770,6 +1811,10 @@ right case till you see any break if exists*/
 // available in the event handler function, whether
 // you explicitly define a parameter for it or not.
 
+// let link = document.createElement('a')
+// link.setAttribute("href", 'https://google.com')
+// link.innerText= 'google'
+// document.body.appendChild(link)
 // document.links[0].onclick=function(event){
 //     console.log(event)
 // }
@@ -2186,7 +2231,6 @@ right case till you see any break if exists*/
 //  labels: Element has no title attribute Element has no placeholder attribute
 // A form field element should have an id or name attribute
 
-
 // const addRandomId = function () {
 //   let x = Math.floor(Math.random() * 79734539705297 + 1);
 //   return x;
@@ -2217,18 +2261,16 @@ right case till you see any break if exists*/
 //       previousStored.splice(index,1)
 //     }
 //     newTask.remove();
-    
+
 //   });
 //   window.localStorage.setItem("tasks", JSON.stringify(previousStored));
 // })
-
 
 // add.addEventListener("click", function () {
 //   if (input.value != "") {
 //     let storedTasks = JSON.parse(window.localStorage.tasks);
 //     storedTasks.push({ title: input.value, id: addRandomId() });
 //     window.localStorage.setItem("tasks", JSON.stringify(storedTasks));
-
 
 //     let newTask = document.createElement("div");
 //     let command = document.createElement("p");
@@ -2246,25 +2288,22 @@ right case till you see any break if exists*/
 // ---------------------------------------------------------------
 // noteeeeeeeeeeeeeeeeee
 // When you use the cssText property to set the
-//  CSS styles for an element, it replaces any existing inline 
-// styles that were previously applied to that element. 
+//  CSS styles for an element, it replaces any existing inline
+// styles that were previously applied to that element.
 // The cssText property allows you to set the entire inline style for an element,
 //  including all the CSS properties and their values.
 // it allows you to set or overwrite the entire inline style for an element
 //  using a single string value that includes all the CSS properties and their values.
 
-
-// when you use the cssText property to set the inline style for an element, 
+// when you use the cssText property to set the inline style for an element,
 // it overwrites any existing inline styles, including those set in the HTML document itself.
 // The cssText property replaces the entire inline style for
 //  an element with the provided value as a string. This
 //   means that any previously set inline styles using dot
 //    notation or written directly in the HTML document will be lost.
-// If you want to preserve existing inline styles and modify 
+// If you want to preserve existing inline styles and modify
 // specific CSS properties individually, you should use dot
 //  notation (e.style.propertyName) to set each property separately, instead of using cssText
-
-
 
 // let container = document.querySelectorAll(".container *")
 // let fontFamily = document.getElementById("selectFont");
@@ -2372,23 +2411,5 @@ right case till you see any break if exists*/
 //     window.sessionStorage.setItem(`${this.classList[1]}`, this.value)
 //   })
 // })
- 
+
 // -------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
