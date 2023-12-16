@@ -870,7 +870,6 @@ right case till you see any break if exists*/
 
 // showInfo('osama',24,100,'y','sprot','writing')
 
-
 // function showDetails(a, b, c) {
 //     let order = [a, b, c];
 //     let name='unknown';
@@ -995,15 +994,12 @@ right case till you see any break if exists*/
 
 // console.log(print(10,20));
 
-
 // function is completely block scope even var inside it
 //  is local and also let. "if" is a block scope also but
 // var inside it is global and let is local.
 
 // if a variable is called in the local scope and it's
 // declared in the local scope, so it must be declared before calling
-
-
 
 // var a=1
 // var b=2
@@ -1165,7 +1161,7 @@ right case till you see any break if exists*/
 // let newNums = invertedNumbers.map((e) => (e === 0 ? (e = 0) : -e));
 // console.log(newNums);
 
-// let ignore = ignoreNumbers 
+// let ignore = ignoreNumbers
 //   .split("")
 //   .map((e) => (isNaN(+e) == true ? e : ""))
 //   .join("");
@@ -1180,12 +1176,9 @@ right case till you see any break if exists*/
 // let ignore=ignoreNumbers.split('').map((e)=>{ if(isNaN(+e)){return e}else{return ''}}).join('')
 // console.log(ignore)
 
-
-
 // let arr = [];
 // let newarr = arr.map(e => e + e)
 // console.log(newarr)
-
 
 // console.log(+'a')
 // console.log(parseInt('a'))
@@ -1361,7 +1354,7 @@ right case till you see any break if exists*/
 //       return e == e.toUpperCase() ? acc : acc + e;
 //     });
 //   })
-//   .join(" "); 
+//   .join(" ");
 // console.log(solution);
 
 // let user={
@@ -1477,7 +1470,7 @@ right case till you see any break if exists*/
 // let soUser = Object.create(user)
 // console.log(soUser)
 
-// Note the new object take the old object similarly 
+// Note the new object take the old object similarly
 // but the 'object.create' take the old object as a prototype
 
 // };
@@ -2223,6 +2216,11 @@ right case till you see any break if exists*/
 //     })
 // })
 
+// ------------------------------------------------
+// note : location.href and location.assign keep the current page in
+// the history while location.replac removes the current page from the history
+// --------------------------------------------
+
 // ----------------------------------------------------
 
 // faileddddddddddddddddddddddddddddddddddddddddddddddddd
@@ -2402,14 +2400,324 @@ right case till you see any break if exists*/
 // input[1].value= window.sessionStorage.second;
 // input[2].value= window.sessionStorage.third;
 // input[3].value= window.sessionStorage.fourth;
-
 // input.forEach((e)=>{
-//   if(e.value ==='undefined'){
-//     e.value='';
-//   }
 //   e.addEventListener("input", function(){
 //     window.sessionStorage.setItem(`${this.classList[1]}`, this.value)
 //   })
 // })
 
 // -------------------------------------------------------------------
+// let num = 10;
+// console.log(--num)
+// console.log(num)
+// console.log(num + 3)
+// ---------------------------------------------------------
+// let myFriends = [
+//     "Ahmed",
+//     "Sayed",
+//     "Ali",
+//     ["Shady", "Amr", ["Mohamed", "Gamal"]],
+// ];
+// let [, , , [a, , [, b]]] = myFriends;
+// console.log(a);
+// console.log(b);
+// -----------------------------------------
+// let book = "video";
+// let video = "book";
+// let swap = book;
+// book = video;
+// video = swap
+// console.log(video)
+// console.log(book)
+// --------------------------------------------
+// let book = "video";
+// let video = "book";
+// [book, video] = [video, book]
+// console.log(video)
+// console.log(book)
+// ---------------------------------------------------- challenge
+
+// let chosen = 3;
+// let myFriends = [
+//     { title: "Osama", age: 39, available: true, skills: ["HTML", "CSS"] },
+//     { title: "Ahmed", age: 25, available: false, skills: ["Python", "Django"] },
+//     { title: "Sayed", age: 33, available: true, skills: ["PHP", "Laravel"] },
+// ];
+// let title;
+// let age;
+// let available;
+// let two;
+// if(chosen == 1) {
+//     [{title, age, available, skills : [, two]}] = myFriends;
+// } else if (chosen == 2) {
+//     [,{title, age, available, skills : [, two]}] = myFriends;
+// }else if (chosen == 3){
+//     [, , {title, age, available, skills : [, two]}] = myFriends;
+// }
+
+// console.log(title);
+// console.log(age);
+// available ? console.log("Available") : console.log("Not Available");
+// console.log(two);
+
+// ---------------------------------------------------
+
+// -------------------------------------------------challenge
+// let myNumbers = [1, 2, 3, 4, 5];
+// let [a,,,,e] = myNumbers
+// console.log(a * e); // 5
+// ------------------------------------------------
+
+// -------------------------------------------------challenge
+
+// let mySkills = ["HTML", "CSS", "JavaScript", ["PHP", "Python", ["Django", "Laravel"]]];
+// let[a, b, c, [d, e, [f, g]]]= mySkills
+// console.log(`My Skills: ${a}, ${b}, ${c}, ${d}, ${e}, ${f}, ${g}`);
+// // My Skills: HTML, CSS, JavaScript, PHP, Python, Django, Laravel
+// ---------------------------------------------------
+
+// -------------------------------------------------challenge
+// let arr1 = ["Ahmed", "Sameh", "Sayed"];
+// let arr2 = ["Mohamed", "Gamal", "Amir"];
+// let arr3 = ["Haytham", "Shady", "Mahmoud"];
+// arr1 = arr1.concat(arr2, arr3)
+// let [c,,, b, , , , a,] = arr1
+// console.log(`My Best Friends: ${a}, ${b}, ${c}`);
+
+// // My Best Friends: Shady, Mahmoud, Ahmed
+// ----------------------------------------------------
+
+// -------------------------------------------------challenge
+// const member = {
+//     age: 30,
+//     working: false,
+//     country: "Egypt",
+//     hobbies: ["Reading", "Swimming", "Programming"],
+//   };
+
+//   let {age: a, working :w, country : c, hobbies : [h1, , h3]} = member
+//   console.log(`My Age Is ${a} And Iam ${w ? "" : "Not"} Working`);
+//   // My Age Is 30 And Iam Not Working
+//   console.log(`I Live in ${c}`);
+//   // I Live in Egypt
+//   console.log(`My Hobbies: ${h1} And ${h3}`);
+//   // My Hobbies: Reading And Programming
+// ------------------------------------------------
+
+// -------------------------------------------------challenge
+// const game = {
+//     title: "YS",
+//     developer: "Falcom",
+//     releases: {
+//       "Oath In Felghana": ["USA", "Japan"],
+//       "Ark Of Napishtim": {
+//         US: "20 USD",
+//         JAP: "10 USD",
+//       },
+//       Origin: "30 USD",
+//     },
+//   };
+
+//   let [o, a] = Object.keys(game.releases);
+//   let {title: t, developer: d, releases : {["Oath In Felghana"]: [u, j], ["Ark Of Napishtim"] : {US : u_price, JAP : j_price}, Origin : or}} = game
+//   console.log(`My Favourite Games Style Is ${t} Style`);
+//   // My Favourite Games Style Is YS Style
+
+//   console.log(`And I Love ${d} Games`);
+//   // And I Love Falcom Games
+
+//   console.log(`My Best Release Is ${o} It Released in ${u} & ${j}`);
+//   // My Best Release Is Oath In Felghana It Released in USA & Japan
+
+//   console.log(`Although I Love ${a}`);
+//   // Although I Love Ark Of Napishtim
+
+//   console.log(`${a} Price in USA Is ${u_price}`);
+//   // Ark Of Napishtim Price in USA Is 20 USD
+
+//   console.log(`${a} Price in Japan Is ${j_price}`);
+//   // Ark Of Napishtim Price in Japan Is 10 USD
+
+//   console.log(`Origin Price Is ${or}`);
+//   // Origin Price Is 30 USD
+// ---------------------------------------------------------------
+
+// // -------------------------------------------Challenge
+// let n1 = [10, 30, 10, 20];
+// let n2 = [30, 20, 10];
+// console.log([...n1, ...n2].length * Math.max(...new Set(n2)));
+// // ------------------------------------------------
+
+// --------------------------------------------------Challenge
+// let setOfNumbers = new Set().add(10)
+// console.log(setOfNumbers)
+// setOfNumbers.add(20).add(setOfNumbers.size)
+// console.log(setOfNumbers)
+// console.log(Array.from(setOfNumbers)[2])
+// console.log(Math.min(...setOfNumbers))
+// console.log([...setOfNumbers][[...setOfNumbers].length -1])
+// -------------------------------------------------------
+
+// --------------------------------------------------Challenge
+
+// let myFriends = ["Osama", "Ahmed", "Sayed", "Sayed", "Mahmoud", "Osama"];
+// console.log([...new Set(myFriends)].sort())
+// ---------------------------------------------------
+
+// --------------------------------------------------Challenge
+
+// let myInfo = {
+//     username: "Osama",
+//     role: "Admin",
+//     country: "Egypt",
+// };
+
+// let myMap = new Map(Object.entries(myInfo))
+// console.log(myMap)
+
+// let keys = Object.keys(myInfo);
+// let myMap = new Map();
+
+// for (let i = 0; i < keys.length; i++) {
+//     myMap.set(keys[i], myInfo[keys[i]]);
+// }
+
+// console.log(myMap);
+// console.log(myMap.size);
+// console.log(myMap.has('role'))
+// --------------------------------------------------------
+
+// --------------------------------------------------Challenge
+// let theNumber = 100020003000;
+// console.log(+theNumber.toString().split("000").join(""))
+// console.log(+[...new Set(theNumber.toString())].filter((e) => e != '0').join(""))
+
+// -------------------------------------------
+
+// --------------------------------------------------Challenge
+
+// let theName = "Elzero";
+// let pushArr= [];
+// let unshiftArr = [];
+// for(let i =0; i < theName.length; i++) {
+//     pushArr.push(theName[i])
+//     unshiftArr.unshift(theName[i])
+// }
+// console.log(theName.split(""))
+// console.log([...theName])
+// console.log(Array.from(theName))
+// console.log(Object.assign([], theName))
+// console.log([...new Set(theName)])
+// console.log(pushArr)
+// console.log(unshiftArr.reverse())
+// --------------------------------------------------
+
+// --------------------------------------------------Challenge
+
+// let chars = ["Z", "Y", "A", "D", "E", 10, 1];
+
+// let myNumbers = chars.filter((e) => !isNaN(e));
+// chars = chars.filter((e) => isNaN(e));
+// let ssss =[]
+// for(let i =0; i < myNumbers.length; i++) {
+//     ssss.unshift(chars[i])
+// }
+// console.log([...ssss.reverse(), ...chars])
+
+// -----------------------------------------------------
+
+// --------------------------------------------------Challenge
+
+// let numsOne = [1, 2, 3];
+// let numsTwo = [4, 5, 6];
+// console.log(numsOne.concat(numsTwo))
+// console.log([...numsOne, ...numsTwo])
+// console.log(numsOne.push(...numsTwo))
+// for(let i =0; i < numsTwo.length; i++){
+//     numsOne.push(numsTwo[i])
+// }
+// console.log(numsOne)
+// -------------------------------------------------------
+// let practice = "OS1 OS1Os OS2 Os8 Os8Os"
+// let practiceRe = /Os[5-9]Os/ig;
+// console.log(practice.match(practiceRe))
+
+// let myString = "AaBbcdefG123!234%^&*";
+// let atoz = /[a-z]/g;
+// console.log(myString.match(atoz));
+// let notatoz = /[^a-z]/g;
+// console.log(myString.match(notatoz));
+// let ATOZ = /[A-Z]/g;
+// console.log(myString.match(ATOZ));
+// let NOTATOZ = /[^A-Z]/g;
+// console.log(myString.match(NOTATOZ));
+// let ace = /[ace]/g;
+// console.log(myString.match(ace));
+// let notace = /[^ace]/g;
+// console.log(myString.match(notace));
+// let myChars = /[A-Z]/gi;
+// console.log(myString.match(myChars));
+// let chars = /[a-zA-Z]/g;
+// console.log(myString.match(chars));
+// let specials = /[^a-z1-9]/ig
+// console.log(myString.match(specials))
+
+
+// ---------------------------------------------------Challenge
+
+// let url1 = 'elzero.org';
+// let url2 = 'http://elzero.org';
+// let url3 = 'https://elzero.org';
+// let url4 = 'https://www.elzero.org';
+// let url5 = 'https://www.elzero.org:8080/articles.php?id=100&cat=topics';
+// let re = /(https?:\/\/(www.)?)?elzero.org(.+)?/ig; // Write Your Pattern Here
+// console.log(url1.match(re));
+// console.log(url2.match(re));
+// console.log(url3.match(re));
+// console.log(url4.match(re));
+// console.log(url5.match(re));
+// ------------------------------------------------------
+
+// ---------------------------------------------------Challenge
+// let ip = "2001:db8:3333:4444:5555:6666:7777:8888";
+// let regEx = /\d{4}:\w{2}\d(:\d{4}){6}/g;
+// console.log(ip.match(regEx))
+// -----------------------------------------------
+
+// ---------------------------------------------------Challenge
+// let specialNames = "Os10O OsO Os100O Osa100O Os1000 Os100m";
+// let regEx = /Os(\w{2,3})?O/g
+// let regEx2 = /\b(Os)\d*O/g
+// console.log(specialNames.match(regEx))
+
+// // Output
+// // ['Os10O', 'OsO', 'Os100O']
+// ---------------------------------------------------
+
+// ---------------------------------------------------Challenge
+// let phone = "+(995)-123 (4567)";
+// let regEx = /\+\(\d{3}\)-\d{3} \(\d{4}\)/g;
+// console.log(phone.match(regEx))
+// ----------------------------------------------------
+
+
+// ---------------------------------------------------Challenge
+
+// let re = /https?:\/\/(?:[-\w]+\.)?([-\w]+)\.\w+(?:\.\w+)?\/?.*/i;
+// /*
+// it matches the first element in the input
+// (s) may be found or not one time
+// */
+// -------------------------------------------------------
+
+// ---------------------------------------------------Challenge
+// let date1 = "25/10/1982";
+// let date2 = "25 - 10 - 1982";
+// let date3 = "25 10 1982";
+// let date4 = "25 10 82";
+// let re = /\d{2}( |\/)(- )?\d{2}( |\/)(- )?\d{2,4}/g; // Write Pattern Here
+// console.log(date1.match(re)); // "25/10/1982"
+// console.log(date2.match(re)); // "25 - 10 - 1982"
+// console.log(date3.match(re)); // "25 10 1982"
+// console.log(date4.match(re)); // "25 10 82"
+// ------------------------------------------------
