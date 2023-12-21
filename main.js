@@ -2662,7 +2662,6 @@ right case till you see any break if exists*/
 // let specials = /[^a-z1-9]/ig
 // console.log(myString.match(specials))
 
-
 // ---------------------------------------------------Challenge
 
 // let url1 = 'elzero.org';
@@ -2700,7 +2699,6 @@ right case till you see any break if exists*/
 // console.log(phone.match(regEx))
 // ----------------------------------------------------
 
-
 // ---------------------------------------------------Challenge
 
 // let re = /https?:\/\/(?:[-\w]+\.)?([-\w]+)\.\w+(?:\.\w+)?\/?.*/i;
@@ -2721,3 +2719,454 @@ right case till you see any break if exists*/
 // console.log(date3.match(re)); // "25 10 1982"
 // console.log(date4.match(re)); // "25 10 82"
 // ------------------------------------------------
+
+// ----------------------- OOP--------------------------------
+
+// function Phone(serial, color, price) {
+//     this.serial = serial;
+//     this.color = color;
+//     this.price = price;
+// }
+// let phone1 = new Phone(123,"red",500);
+// console.log(phone1.serial)
+// console.log(phone1.color)
+// console.log(phone1.price)
+// console.log(typeof phone1)
+// console.log(typeof Phone)
+// -----------------
+// function Phone(serial){
+//     console.log(this)
+// }
+// let phone = new Phone(1223)
+// console.log(phone)
+// console.log(phone.serial) // undefined
+// --------------------
+// function Phone(serial){
+//     console.log(this)
+//     this.momo = serial
+// }
+// let phone = new Phone(1223)
+// console.log(phone)
+// console.log(phone.momo) // undefined
+// ----------------
+// function Phone(serial) {
+//     console.log(this);
+//     this.serial = serial;
+// }
+// let phone1 = new Phone(234);
+// let phone2 = new Phone(23794);
+// let phone3 = Phone(1223);
+// console.log(phone1);
+// console.log(phone2);
+// console.log(phone3); //undefined
+// console.log(phone1.serial);
+// console.log(phone2.serial);
+// // console.log(phone3.serial) //error
+// console.log(window.serial);
+// console.log(phone1 instanceof Phone);
+// console.log(phone2 instanceof Phone);
+// console.log(phone3 instanceof Phone);
+// console.log(phone1.constructor)
+// console.log(phone2.constructor)
+// // console.log(phone3.constructor) //error
+// console.log(phone1.constructor === Phone)
+// console.log(phone2.constructor === Phone)
+// // console.log(phone3.constructor === Phone) //error
+// ---------------
+// function Phone(serial) {
+//     this.serial = serial;
+//     this.tellSerial = () => `the serial is ${this.serial}`
+// }
+// let phone1 = new Phone(234);
+// let phone2 = new Phone(23794);
+// console.log(Phone.prototype)
+// // console.log(phone1.prototype) //undefined
+// console.log(phone1)
+// Phone.prototype.addtitle = () => `u r great`
+// console.log(Phone.prototype)
+// ------------------
+// String.prototype.zFill = function (width) {
+//     let theResult = this;
+//     while(theResult.length < width) {
+//         theResult = `0${theResult}`
+//     }
+//     return theResult.toString()
+// }
+// let myString = "123"
+// console.log(myString.zFill(5))
+// console.log("7473".zFill(5))
+// console.log("91938".zFill(5))
+// console.log("8898".zFill(5))
+// ------------------
+// function Phone(serial) {
+//     this.serial = serial;
+//     this.tellSerial = () => `the serial is ${this.serial}`
+// }
+// let phone1 = new Phone(234);
+// console.log(Phone.prototype) //prototype
+// console.log(Phone.__proto__) //function native code
+// console.log(phone1.__proto__) //prototype
+// // it seems that the the instance has a proto and the constructor has a prototype
+// ----------------
+// function Phone(serial) {
+//     this.serial = serial;
+//     this.tellSerial = () => `the serial is ${this.serial}`
+//     if (!(this instanceof Phone)) {
+//         throw new Error ("Must Be Called With New Keyword");
+//     }
+// }
+
+// ----------------
+// ES6
+// function Phone(serial) {
+//     this.serial = serial;
+//     this.tellSerial = () => `the serial is ${this.serial}`
+//     if (!new.target) {
+//         throw new Error ("Must Be Called With New Keyword");
+//     }
+// }
+// ------------------
+// class Phone {
+//     constructor(serial) {
+//         this.serial = serial;
+//         this.tellSerial = () => `the serial is ${this.serial}`;
+//     }
+// }
+// let phone1 = new Phone(234);
+
+// ----------------------------------------------------Challenge
+
+// class Car {
+//     constructor(name, model, price) {
+//         this.n = name;
+//         this.m = model;
+//         this.p = price;
+//       }
+//       run(){
+//         return `Car Is Running`
+//       }
+//       stop(){
+//         return `Car Is Stopped`
+//       }
+// }
+
+// let car1 = new Car('merry', 'one piece', 3000000);
+// let car2 = new Car('merry2', 'one piece2', 3000000);
+// let car3 = new Car('merry3', 'one piece3', 3000000);
+
+// console.log(`Car one is ${car1.n} and model is ${car1.m} and price is ${car1.p}`)
+// console.log(car1.run())
+// ----------------------------------------------------
+
+// ----------------------------------------------------Challenge
+
+// class Phone {
+//     constructor(name, serial, price) {
+//       this.name = name;
+//       this.serial = serial;
+//       this.price = price;
+//     }
+//   }
+
+// class Tablet extends Phone {
+//     constructor (name, serial, price, size){
+//         super(name, serial, price)
+//         this.size = size || 'unknown'
+//     }
+//     fullDetails(){
+//         return `${this.name} serial is ${this.serial} and size is ${this.size}`
+//     }
+// }
+
+//   let TabletOne = new Tablet("iPad", 100200300, 1500, 12.9);
+//   let TabletTwo = new Tablet("Nokia", 350450650, 800, 10.5);
+//   let TabletThree = new Tablet("LG", 250450650, 650);
+
+//   console.log(`${TabletOne.fullDetails()}`);
+//   // iPad Serial is 100200300 And Size Is 12.9
+
+//   console.log(`${TabletTwo.fullDetails()}`);
+//   // Nokia Serial is 350450650 And Size Is 10.5
+
+//   console.log(`${TabletThree.fullDetails()}`);
+//   // LG Serial is 250450650 And Size Is Unknown
+// ------------------------------------------------------------
+// ----------------------------------------------------Challenge
+// class User {
+//     #c;
+//     constructor(username, card) {
+//       this.u = username;
+//       this.#c = card.toString().replaceAll("-","").replace(/(.{4})/g, '$1-');
+//this.#c = card.toString().match(/\d{4}/g).join("-")
+//     }
+//     get showData (){
+//         return `Hello ${this.u} the card number is ${this.#c}`
+//     }
+//   }
+
+//   let userOne = new User("Osama", "1234-5678-1234-5678");
+//   let userTwo = new User("Ahmed", "1234567812345678");
+//   let userThree = new User("Ghareeb", 1234567812345678);
+
+//   console.log(userOne.showData);
+//   // Hello Osama Your Credit Card Number Is 1234-5678-1234-5678
+
+//   console.log(userTwo.showData);
+//   // Hello Ahmed Your Credit Card Number Is 1234-5678-1234-5678
+
+//   console.log(userThree.showData);
+//   // Hello Ghareeb Your Credit Card Number Is 1234-5678-1234-5678
+
+//   console.log(userOne.c); // Prevent Accessing To Card Property Here
+//   // Undefined
+// ----------------------------------------------------
+
+// ------------------------------------------------Challenge
+// String.prototype.addLove = function(){
+//     return `I love ${this} Web Scholl`
+// }
+// let myStr = "Elzero";
+// console.log(myStr.addLove())
+// -------------------------------------------------
+
+// --------------------------------------------Challenge
+// const myObj = {
+//     username: "Elzero",
+//     id: 100,
+//     score: 1000,
+//     country: "Egypt",
+//   };
+
+//   Object.defineProperties(myObj, {
+//     score:{
+//         writable : false,
+//         configurable: true,
+//         enumerable : true
+//     },
+//     id: {
+//         writable : true,
+//         configurable: true,
+//         enumerable : false
+//     },
+//   })
+//   delete myObj.country;
+//   myObj.score = 500;
+
+//   for (let prop in myObj) {
+//     console.log(`${prop} => ${myObj[prop]}`);
+//   }
+
+//   console.log(myObj);
+
+// Needed Output
+
+//   "username => Elzero"
+//   "score => 1000"
+//   {username: 'Elzero', score: 1000, id: 100}
+// -------------------------------------------------
+// let dateNow = new Date()
+// console.log(dateNow)
+// console.log(Date.now())
+
+// let seconds = ((((Date.now() / 1000) /60) / 60) / 24) / 365
+// console.log(seconds)
+// ----------------------
+
+// dateNow = new Date()
+// console.log(dateNow.getFullYear())
+// -----------------------
+// let dateNow = new Date()
+// let birthday = new Date("Sep 18, 99")
+// let dateDiff = (dateNow - birthday) / 1000/60/60/24/365;
+// console.log(dateDiff)
+// console.log(dateNow.getDate())
+// console.log(dateNow.getFullYear())
+// console.log(dateNow.getMonth())
+// console.log(dateNow.getDay())
+// console.log(dateNow.getHours())
+// console.log(dateNow.getMinutes())
+// console.log(dateNow.getSeconds())
+// console.log(dateNow.getTime())
+// dateNow.setTime(0)
+// console.log(dateNow)
+// dateNow.setDate(1)
+// console.log(dateNow)
+// dateNow.setFullYear(1980)
+// console.log(dateNow)
+// dateNow.setMonth(11)
+// console.log(dateNow)
+// dateNow.setHours(11)
+// console.log(dateNow)
+// dateNow.setMinutes(11)
+// console.log(dateNow)
+// dateNow.setSeconds(11)
+// console.log(dateNow)
+// console.log(Date.parse("Sep 18 99"))
+// let dateNow = new Date("Sep 18 99")
+// console.log(dateNow)
+
+/*
+Date.now() => from 1 jan 1970 => mill seconds- for the constructor only
+getTime() => from 1 jan 1970 => mill seconds-
+getDate() => Day of the current month
+getFullYear() => the current year
+getMonth() => current Month in index -1 
+getDay() => Day of the week - sunday is index 0 -
+getHours() => the current hour
+getMinutes() => the minute in the current hour
+getSeconds() => the current second in the current minute of the current hour
+setTime(miliSeconds) => set the beginnig of time calculation
+setDate() => set a day of the current month and "0" is 30 of the previous month and "31" is the first day in the next month
+setFullYear(,,,) => set the year
+setMonth(,,) => set the month in index
+setHours(,,) => set the current hour
+setMinute() => set the minutes
+setSeconds => set seconds
+Date.parse("String") => return the time from the beginning of the argument in millinseconds
+*/
+
+// -----------------------------------------------Challenge
+// let dateNow = new Date("oct 25 1982")
+// let dtge = Date.now()
+// birthdate= dtge - dateNow
+// console.log(`${parseInt(birthdate / 1000)} Seconds`)
+// console.log(`${parseInt(birthdate / 1000 / 60)} Minutes`)
+// console.log(`${parseInt(birthdate / 1000 /60 / 60)} Hours`)
+// console.log(`${parseInt(birthdate / 1000 /60 / 60 / 24)} Days`)
+// console.log(`${parseInt(birthdate / 1000 /60 / 60 /24 / 30)} Month`)
+// console.log(`${parseInt(birthdate / 1000 /60 / 60 /24 / 365)} Years`)
+// ----------------------
+
+// -----------------------------------------------Challenge
+// dateForm = new Date("1980-01-01T00:00:10")
+// console.log(dateForm)
+// ------------------------------------------
+
+// -----------------------------------------------Challenge
+// dateForm = new Date();
+// dateForm.setDate(0);
+// console.log(dateForm);
+// let months = [
+//     "jan",
+//     "Feb",
+//     "March",
+//     "abril",
+//     "May",
+//     "june",
+//     "july",
+//     "August",
+//     "Sep",
+//     "Oct",
+//     "Nov",
+//     "dec",
+// ];
+// console.log(`Previous Month is ${months[dateForm.getMonth()]} and Last Day is ${dateForm.getDate()}`);
+// ---------------------------------------------
+
+// -----------------------------------------------Challenge
+// dateForm = new Date("1999-09-18T00:00:00")
+// console.log(dateForm)
+
+// dateForm = new Date(0)
+// dateForm.setHours(0)
+// dateForm.setFullYear(1999,8,18)
+// console.log(dateForm)
+
+// let dateForm = new Date("1999-9-18")
+// console.log(dateForm)
+// -----------------------------------------------------
+
+// -----------------------------------------------Challenge
+// let Start = new Date().getTime()
+// for(let i =0; i < 99999; i++){
+//     console.log(i)
+// }
+
+// let End = new Date().getTime()
+// let result = End - Start;
+// console.log(`'Loop Took ${Math.trunc(result)} Milliseconds`)
+
+// p1 = performance.now();
+// for(let i =0; i < 99999; i++){m
+//     console.log(i)
+// }
+// p2 = performance.now();
+
+// console.log(`'Loop Took ${Math.trunc(p2 - p1)} Milliseconds`)
+// -----------------------------------------
+ 
+// -----------------------------------------------Challenge
+// function* gen(){
+//     let a = 14;
+//     let add = 140
+//     let previous = a + add;
+//     yield a
+// while(true){
+// yield previous
+// a = previous
+// add += 200
+// previous = a + add
+
+// }
+// }
+
+// let generator = gen();
+
+// function* numberGenerator() {
+//     let currentNumber = 14;
+//     let increment = 140;
+//     let nextNumber = currentNumber + increment;
+
+//     yield currentNumber;
+
+//     while (true) {
+//       yield nextNumber;
+//       currentNumber = nextNumber;
+//       increment += 200;
+//       nextNumber = currentNumber + increment;
+//     }
+//   }
+
+//   let generator = numberGenerator();
+
+// console.log(generator.next()); // {value: 14, done: false}
+// console.log(generator.next()); // {value: 154, done: false}
+// console.log(generator.next()); // {value: 494, done: false}
+// console.log(generator.next()); // {value: 1034, done: false}
+// console.log(generator.next()); // {value: 1774, done: false}
+// console.log(generator.next()); // {value: 2714, done: false}
+// console.log(generator.next()); // {value: 3854, done: false}
+// console.log(generator.next()); // {value: 5194, done: false}
+// console.log(generator.next()); // {value: 6734, done: false}
+// ---------------------------------------
+
+// ----------------------------------------------Challenge
+// function* genNumbers() {
+//     yield* [1, 2, 2, 2, 3, 4, 5];
+//   }
+//   function* genLetters() {
+//     yield* ["A", "B", "B", "B", "C", "D"];
+//   }
+
+//   function* genAll() {
+//     yield* [...new Set(genNumbers())]
+//     yield* [...new Set(genLetters())]
+//   }
+
+//   let generator = genAll();
+
+//   console.log(generator.next()); // {value: 1,  done: false}
+//   console.log(generator.next()); // {value: 2, done: false}
+//   console.log(generator.next()); // {value: 3, done: false}
+//   console.log(generator.next()); // {value: 4, done: false}
+//   console.log(generator.next()); // {value: 5, done: false}
+//   console.log(generator.next()); // {value: "A", done: false}
+//   console.log(generator.next()); // {value: "B", done: false}
+//   console.log(generator.next()); // {value: "C", done: false}
+//   console.log(generator.next()); // {value: "D", done: false}
+// -----------------------------------------------
+
+// ---------------------------------------------Challenge
+import calc from "./mod-one.js";
+import * as modOne from "./mod-two.js"
+console.log(calc(modOne.numOne, modOne.numTwo, modOne.numThree));
