@@ -3094,7 +3094,7 @@ Date.parse("String") => return the time from the beginning of the argument in mi
 
 // console.log(`'Loop Took ${Math.trunc(p2 - p1)} Milliseconds`)
 // -----------------------------------------
- 
+
 // -----------------------------------------------Challenge
 // function* gen(){
 //     let a = 14;
@@ -3167,6 +3167,96 @@ Date.parse("String") => return the time from the beginning of the argument in mi
 // -----------------------------------------------
 
 // ---------------------------------------------Challenge
-import calc from "./mod-one.js";
-import * as modOne from "./mod-two.js"
-console.log(calc(modOne.numOne, modOne.numTwo, modOne.numThree));
+// import calc from "./mod-one.js";
+// import * as modOne from "./mod-two.js"
+// console.log(calc(modOne.numOne, modOne.numTwo, modOne.numThree));
+// ------------------------------------------
+
+// ---------------------------------------------Challenge
+
+// let response = new XMLHttpRequest();
+// response.open("GET", "articles.json");
+// response.send();
+// response.onreadystatechange = function () {
+//     if (this.readyState === 4 && this.status === 200) {
+//         console.log(response);
+//         setTimeout(() => {
+//             console.log("Data Loaded");
+//         }, 0);
+//         let mainData = JSON.parse(response.responseText);
+//         // for(let i =0; i< mainData.length ; i++){
+//         //     mainData[i]["Section"] = "All"
+//         // }
+//         console.log(mainData);
+//         let updatedData = JSON.stringify(mainData);
+//         console.log(updatedData);
+//         let div = document.createElement("div");
+//         div.id = "data";
+//         document.body.appendChild(div);
+//         for (let i = 0; i < mainData.length; i++) {
+//             let cont = document.createElement("div");
+//             cont.innerHTML = `
+//             <div>
+//                 <h2>Title ${mainData[i]["Title"]}</h2>
+//                 <p>Article Content ${mainData[i]["Content"]}</p>
+//                 <p>Author: ${mainData[i]["Author"]}</p>
+//                 <p>Category: ${mainData[i]["Section"]}</p>
+//             </div>`;
+//             div.appendChild(cont);
+//         }
+//     }
+// };
+// --------------------------------------------------------------
+
+// ---------------------------------------------Challenge
+
+// let myPromise = new Promise((resolve, reject)=>{
+//     let myobjs = new XMLHttpRequest()
+//     myobjs.open('GET', 'task.json')
+//     myobjs.send()
+//     myobjs.onload = function(){
+//         if(this.readyState === 4 && this.status === 200){
+//             let myData = JSON.parse(this.responseText)
+//             resolve(myData)
+//         }else{
+//             reject(new Error("Data Not Found"))
+//         }
+//     }
+// }).then((resolveValue)=>{
+//     for(let i = 0; i < 5; i++){
+//         let div = document.createElement("div");
+//         div.innerHTML = `
+//             <div>
+//                 <h3>${resolveValue[i]["title"]}</h3>
+//                 <p>${resolveValue[i]["description"]}</p>
+//             </div>`;
+//         document.body.appendChild(div);
+//     }
+// }).catch((rejectValue)=>{
+//     document.write(rejectValue)
+// })
+// ----------------------------------------------------
+
+// ----------------------------------------------Challenge
+// fetch("task.json")
+//     .then((resolveValue) => {
+//         let myData = resolveValue.json();
+//         return myData;
+//     })
+//     .then((myData) => {
+//         for (let i = 0; i < 5; i++) {
+//             let div = document.createElement("div");
+//             div.innerHTML = `
+//             <div>
+//                 <h3>${myData[i]["title"]}</h3>
+//                 <p>${myData[i]["description"]}</p>
+//             </div>`;
+//             document.body.appendChild(div);
+//         }
+//     })
+//     .catch((rejectValue) => {
+//         document.write(rejectValue);
+//     });
+// ------------------------------------------------
+
+// End 
